@@ -1,0 +1,270 @@
+id,mt_module_code,name,temp_field_name,data_type,is_mandatory,default_value,min,max,decimal,regex,is_lookup,lookup_service,lookup_table,lookup_field,is_hidden,default_value_type,lookup_condition,dest_service,dest_table,dest_field
+1,LOCA,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,locations,code
+2,LOCA,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,locations,name
+3,LOCA,Description,f3,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,locations,description
+4,LOCA,Calendar Key,f4,TEXT,f,NULL,,20,,,t,core,lovs,key_data,f,,lov_type_code='CAL',core,locations,calendar_code
+5,LOCA,Tax Office,f5,TEXT,f,NULL,,5,,,t,payroll,tax_offices,code,f,VALUE,,core,locations,tax_office_code
+6,LOCA,City Code,f6,INTEGER,t,,,20,,,t,core,cities,id,f,,,core,locations,city_code
+8,LOCA,Address,f7,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,locations,address
+9,LOCA,Postal Code,f8,TEXT,f,NULL,,10,,^[0-9]{5}$,f,,,,f,VALUE,,core,locations,postal_code
+10,LOCA,Phone,f9,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,locations,phone
+11,LOCA,Fax,f10,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,locations,fax
+12,LOCA,Start Effective Date,f11,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,locations,eff_begin
+13,LOCA,End Effective Date,f12,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,locations,eff_end
+14,COCE,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,,,core,cost_centers,code
+15,COCE,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,cost_centers,name
+16,COCE,Start Effective Date,f3,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,cost_centers,eff_begin
+17,COCE,End Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,cost_centers,eff_end
+18,GRDS,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,grades,code
+19,GRDS,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,grades,name
+20,GRDS,Order,f3,INTEGER,t,,1,32000,,,f,,,,f,,,core,grades,ordinal
+21,GRDS,Work Month,f4,INTEGER,f,NULL,1,255,,,f,,,,f,VALUE,,core,grades,work_month
+22,GRDS,Bottom Rate,f5,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,grades,bottom_rate
+23,GRDS,Mid Rate,f6,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,grades,mid_rate
+24,GRDS,Top Rate,f7,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,grades,top_rate
+25,GRDS,Start Effective Date,f8,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,grades,eff_begin
+26,GRDS,End Effective Date,f9,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,grades,eff_end
+27,UNTY,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,unit_types,code
+28,UNTY,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,unit_types,name
+29,UNTY,Unit Level,f3,INTEGER,t,,1,32000,,,f,,,,f,,,core,unit_types,unit_level
+30,UNIT,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,units,code
+31,UNIT,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,units,name
+32,UNIT,Location Code,f3,TEXT,f,NULL,,20,,,f,,,,f,VALUE,,core,units,location_code
+33,UNIT,Unit Type Code,f4,TEXT,f,NULL,,20,,,t,core,unit_types,code,f,,,core,units,unit_type_code
+34,UNIT,Cost Center Code,f5,TEXT,f,NULL,,20,,,t,core,cost_centers,code,f,VALUE,,core,units,cost_center_code
+35,UNIT,Start Effective Date,f6,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,units,eff_begin
+36,UNIT,End Effective Date,f7,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,units,eff_end
+37,JOFA,Code,f1,TEXT,f,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,job_families,code
+38,JOFA,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,job_families,name
+39,JOFA,Start Effective Date,f3,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,job_families,eff_begin
+40,JOFA,End Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,job_families,eff_end
+41,JOFA,Description,f5,TEXT,f,NULL,,255,,,f,,,,f,,,core,job_families,description
+42,JOBS,Job Family,f1,TEXT,f,NULL,,,,,t,core,job_families,code,f,VALUE,,core,jobs,job_family_code
+43,JOBS,Job Category,f2,TEXT,f,NULL,,,,,t,core,job_categories,code,f,VALUE,,core,jobs,job_category_code
+44,JOBS,Code,f3,TEXT,t,,,50,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,jobs,code
+45,JOBS,Name,f4,TEXT,t,,,50,,,f,,,,f,,,core,jobs,name
+46,JOBS,Description,f5,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,jobs,description
+47,JOBS,Order,f6,INTEGER,t,,1,32000,,,f,,,,f,VALUE,,core,jobs,ordinal
+48,JOBS,Start Effective Date,f7,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,jobs,eff_begin
+49,JOBS,End Effective Date,f8,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,jobs,eff_end
+50,JOGR,Job Code,f1,TEXT,t,,,20,,,t,core,units,code,f,,,core,job_grades,job_code
+51,JOGR,Grade Code,f2,TEXT,t,,,20,,,t,core,grades,code,f,,,core,job_grades,grade_code
+52,JOGR,Bottom Rate,f3,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,job_grades,bottom_rate
+53,JOGR,Mid Rate,f4,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,job_grades,mid_rate
+54,JOGR,Top Rate,f5,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,job_grades,top_rate
+55,POST,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,positions,code
+56,POST,Unit Code,f2,TEXT,t,,,20,,,t,core,units,code,f,,,core,positions,unit_code
+57,POST,Job Code,f3,TEXT,t,,,20,,,t,core,jobs,code,f,,,core,positions,job_code
+58,POST,Name,f4,TEXT,t,,,50,,,f,,,,f,,,core,positions,name
+59,POST,Description,f5,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,positions,description
+60,POST,Is Unit Head,f6,BOOLEAN,t,,,,,,f,,,,f,,,core,positions,is_head
+61,POST,Start Effective Date,f7,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,positions,eff_begin
+62,POST,End Effective Date,f8,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,positions,eff_end
+63,POGR,Position Code,f1,TEXT,t,,,20,,,t,core,positions,code,f,,,core,position_grades,position_code
+64,POGR,Grade Code,f2,TEXT,t,,,20,,,t,core,grades,code,f,,,core,position_grades,grade_code
+65,POGR,Bottom Rate,f3,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,position_grades,bottom_rate
+66,POGR,Mid Rate,f4,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,position_grades,mid_rate
+67,POGR,Top Rate,f5,INTEGER,f,NULL,0,2000000000,,,f,,,,f,VALUE,,core,position_grades,top_rate
+68,ASET,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,assets,code
+69,ASET,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,assets,name
+70,ASET,Type,f3,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,assets,type
+71,ASET,Description,f4,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,assets,description
+72,ASET,Start Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,assets,eff_begin
+73,ASET,End Effective Date,f6,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,assets,eff_end
+74,ASRE,Action Type Key,f1,TEXT,t,,,20,,,t,core,lovs,key_data,f,,lov_type_code='ACTY',core,assignment_reasons,lov_acty
+75,ASRE,Code,f2,TEXT,t,,,10,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,,,core,assignment_reasons,code
+76,ASRE,Description,f3,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,assignment_reasons,description
+77,ASRE,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,assignment_reasons,eff_begin
+78,ASRE,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,assignment_reasons,eff_end
+79,EMST,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,employee_statuses,code
+80,EMST,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,employee_statuses,name
+81,EMST,Working Month,f3,INTEGER,t,,0,32000,,,f,,,,f,VALUE,,core,employee_statuses,working_month
+82,EMST,Payroll Group Code,f4,TEXT,f,,,20,,,f,,,,f,,,core,employee_statuses,payroll_group_code
+83,EMST,Benefit Group Code,f5,TEXT,f,,,20,,,f,,,,f,,,core,employee_statuses,benefit_group_code
+84,EMST,Start Effective Date,f6,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,employee_statuses,eff_begin
+85,EMST,End Effective Date,f7,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,employee_statuses,eff_end
+86,EMPL,ID Card Number,f1,TEXT,f,NULL,,20,,,f,,,,f,VALUE,,core,persons,id_card
+87,EMPL,First Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,persons,first_name
+88,EMPL,Last Name,f3,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,persons,last_name
+89,EMPL,Birth Place,f4,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,persons,birth_place
+90,EMPL,Birth Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,,,core,persons,birth_date
+91,EMPL,Email,f6,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,persons,email
+92,EMPL,Phone,f7,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,persons,phone
+93,EMPL,Mobile,f8,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,persons,mobile
+94,EMPL,Hobbies,f9,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,persons,hobbies
+95,EMPL,Strength,f10,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,persons,strength
+96,EMPL,Weakness,f11,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,persons,weakness
+97,EMPL,Country Code,f12,TEXT,t,,,20,,,t,core,countries,code,f,,,core,persons,country_code
+98,EMPL,Blood Type Key,f13,TEXT,f,NULL,,10,,,t,core,lovs,key_data,f,VALUE,lov_type_code='BLOD',core,persons,lov_blod
+99,EMPL,Gender Key,f14,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='GNDR',core,persons,lov_gndr
+100,EMPL,Religion Key,f15,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='RLGN',core,persons,lov_rlgn
+101,EMPL,Marital Status Key,f16,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='MARS',core,persons,lov_mars
+102,EMPL,Photo,f17,FILE,f,NULL,,255,,,f,,,,f,VALUE,,core,persons,file_photo
+103,EMPL,Person Type,,TEXT,t,EMP,,,,,f,,,,t,VALUE,,core,persons,lov_ptyp
+104,EMPL,Start Effective Date,,DATE,t,f32,,,,,f,,,,t,MIN_DATE,,core,persons,eff_begin
+105,EMPL,End Effective Date,,DATE,t,f33,,,,,f,,,,t,MAX_DATE,,core,persons,eff_end
+106,EMPL,Action Type Key,f19,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='ACTY',core,assignments,lov_acty
+107,EMPL,Assignment Reason Code,f20,TEXT,t,,,20,,,t,core,assignment_reasons,code,f,,,core,assignments,assignment_reason_code
+108,EMPL,Employee ID,f21,TEXT,t,,,20,,,f,,,,f,,,core,assignments,employee_id
+109,EMPL,Employee Status Code,f22,TEXT,t,,,20,,,t,core,employee_statuses,code,f,,,core,assignments,employee_status_code
+110,EMPL,Unit Code,f23,TEXT,t,,,20,,,t,core,units,code,f,,,core,assignments,unit_code
+111,EMPL,Job Code,f24,TEXT,t,,,20,,,t,core,jobs,code,f,,,core,assignments,job_code
+112,EMPL,Position Code,f25,TEXT,t,,,20,,,t,core,positions,code,f,,,core,assignments,position_code
+113,EMPL,Cost Center Code,f26,TEXT,f,,,20,,,t,core,cost_centers,code,f,INHERIT,,core,assignments,cost_center_code
+114,EMPL,Grade Code,f27,TEXT,f,,,20,,,t,core,grades,code,f,INHERIT,,core,assignments,grade_code
+115,EMPL,Location Code,f28,TEXT,t,,,20,,,t,core,locations,code,f,INHERIT,,core,assignments,location_code
+116,EMPL,Position Slot Code,,TEXT,t,function,,20,,,f,,,,f,,,core,assignments,position_slot_code
+117,EMPL,Assignment Status Key,f29,TEXT,t,,,10,,,f,,,,f,,,core,assignments,lov_asta
+118,EMPL,Assignment Document Number,f30,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,assignments,assignment_doc_number
+119,EMPL,Assignment Document,f31,FILE,f,NULL,,255,,,f,,,,f,VALUE,,core,assignments,file_assignment_doc
+120,EMPL,Start Effective Date,f32,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,assignments,eff_begin
+121,EMPL,End Effective Date,f33,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,assignments,eff_end
+122,EMPL,Person ID,,INTEGER,t,F-persons_id,,,,,f,,,,t,PREINPUT,,core,assignments,person_id
+123,EMPL,Is Primary,,INTEGER,f,t,,,,,f,,,,t,VALUE,,core,assignments,is_primary
+124,EMPL,Time Group Code,f34,TEXT,t,,,,,,t,time,time_groups,code,f,,,time,time_attributes,time_group_code
+125,EMPL,Employee ID,,TEXT,f,f21,,,,,f,,,,t,PREINPUT,,time,time_attributes,employee_id
+126,EMPL,Start Effective Date,,DATE,f,MIN_DATE,,,,,f,,,,t,,,time,time_attributes,eff_begin
+127,EMPL,End Effective Date,,DATE,f,MAX_DATE,,,,,f,,,,t,,,time,time_attributes,eff_end
+128,EMMBR,Membership Type Key,f1,TEXT,f,,,10,,,t,core,lovs,key_data,f,,lov_type_code='MBTY',core,person_memberships,lov_mbty
+130,EMMBR,Account Number,f3,TEXT,t,,,50,,,f,,,,f,,,core,person_memberships,acc_number
+131,EMMBR,Start Effective Date,f4,DATE,f,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,person_memberships,eff_begin
+132,EMMBR,End Effective Date,f5,DATE,f,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,person_memberships,eff_end
+135,EMSOC,Social Media Key,f2,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='SOCM',core,person_socmeds,lov_socm
+136,EMSOC,Account,f3,TEXT,t,,,255,,,f,,,,f,,,core,person_socmeds,account
+139,EMADD,Residence Type Key,f2,TEXT,t,,,,,,t,core,lovs,key_data,f,,lov_type_code='RSTY',core,person_addresses,lov_rsty
+140,EMADD,Residence Ownership Key,f3,TEXT,t,,,,,,t,core,lovs,key_data,f,,lov_type_code='RSOW',core,person_addresses,lov_rsow
+141,EMADD,City Code,f4,TEXT,t,,,20,,,t,core,cities,code,f,,,core,person_addresses,city_code
+142,EMADD,Address,f5,TEXT,t,,,255,,,f,,,,f,,,core,person_addresses,address
+143,EMADD,Postal Code,f6,TEXT,f,NULL,,10,,^[0-9]{5}$,f,,,,f,VALUE,,core,person_addresses,postal_code
+144,EMADD,Phone,f7,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,person_addresses,phone
+145,EMADD,Fax,f8,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,person_addresses,fax
+146,EMADD,Start Effective Date,f9,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,person_addresses,eff_begin
+147,EMADD,End Effective Date,f10,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,person_addresses,eff_end
+148,EMADD,Is Default,f11,BOOLEAN,t,,,,,,f,,,,f,,,core,person_addresses,is_default
+151,EMEXP,Company,f2,TEXT,t,,,50,,,f,,,,f,,,core,person_work_exps,company
+152,EMEXP,Position,f3,TEXT,t,,,50,,,f,,,,f,,,core,person_work_exps,job_pos
+153,EMEXP,Job Description,f4,TEXT,t,,,255,,,f,,,,f,,,core,person_work_exps,job_desc
+154,EMEXP,Location,f5,TEXT,t,,,255,,,f,,,,f,,,core,person_work_exps,location
+155,EMEXP,Benefit,f6,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,person_work_exps,benefit
+156,EMEXP,Last Salary,f7,INTEGER,t,,0,2000000000,,,f,,,,f,,,core,person_work_exps,last_salary
+157,EMEXP,Reason of Resign,f8,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,person_work_exps,reason
+158,EMEXP,Start Working,f9,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,,,core,person_work_exps,date_begin
+159,EMEXP,End Working,f10,DATE,f,NULL,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,VALUE,,core,person_work_exps,date_end
+162,EMORG,Institution,f2,TEXT,t,,,50,,,f,,,,f,,,core,person_organizations,institution
+163,EMORG,Year Begin,f3,INTEGER,t,,,,,,f,,,,f,,,core,person_organizations,year_begin
+164,EMORG,Year End,f4,INTEGER,t,,,,,,f,,,,f,VALUE,,core,person_organizations,year_end
+165,EMORG,Description,f5,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,person_organizations,description
+168,EMETR,Institution,f2,TEXT,t,,,50,,,f,,,,f,,,core,person_ext_trainings,institution
+169,EMETR,Year Begin,f3,INTEGER,t,,,,,,f,,,,f,,,core,person_ext_trainings,year_begin
+170,EMETR,Year End,f4,INTEGER,t,,,,,,f,,,,f,VALUE,,core,person_ext_trainings,year_end
+171,EMETR,Description,f5,TEXT,t,,,255,,,f,,,,f,,,core,person_ext_trainings,description
+172,EMETR,Certificate,f6,,f,NULL,,50,,,f,,,,f,VALUE,,core,person_ext_trainings,file_certificate
+175,EMEDU,Education Level Key,f2,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='EDUL',core,person_educations,lov_edul
+129,EMMBR,Employee ID,f2,TEXT,t,,,20,,,t,,,,f,,,,,
+137,EMSOC,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_socmeds,person_id
+134,EMSOC,Employee ID,f1,TEXT,t,,,20,,,t,,,,f,,,,,
+149,EMADD,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_addresses,person_id
+138,EMADD,Employee ID,f1,TEXT,t,,,20,,,t,,,,f,,,,,
+150,EMEXP,Employee ID,f1,TEXT,t,,,20,,,t,,,,f,,,,,
+160,EMEXP,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_work_exps,person_id
+166,EMORG,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_organizations,person_id
+161,EMORG,Employee ID,f1,TEXT,t,,,20,,,t,,,,f,,,,,
+173,EMETR,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_ext_trainings,person_id
+167,EMETR,Employee ID,f1,TEXT,t,,,20,,,t,,,,f,,,,,
+174,EMEDU,Employee ID,f1,TEXT,t,,,20,,,t,,,,f,,,,,
+176,EMEDU,Institution,f3,TEXT,t,,,50,,,f,,,,f,,,core,person_educations,institution
+177,EMEDU,Subject,f4,TEXT,f,,,50,,,f,,,,f,,,core,person_educations,subject
+178,EMEDU,Grade,f5,DECIMAL,t,,0,,,,f,,,,f,VALUE,,core,person_educations,grade
+179,EMEDU,Max Grade,f6,DECIMAL,t,,0,,,,f,,,,f,,,core,person_educations,max_grade
+180,EMEDU,Year Begin,f7,INTEGER,t,,,,,,f,,,,f,,,core,person_educations,year_begin
+181,EMEDU,Year End,f8,INTEGER,f,NULL,,,,,f,,,,f,VALUE,,core,person_educations,year_end
+182,EMEDU,Start Effective Date,f9,DATE,f,NULL,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,person_educations,eff_begin
+183,EMEDU,End Effective Date,f10,DATE,f,NULL,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,person_educations,eff_end
+186,EMLAN,Language Key,f2,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='LANG',core,person_languages,lov_lang
+187,EMLAN,Writing,f3,INTEGER,t,,0,10,,,f,,,,f,,,core,person_languages,writing
+188,EMLAN,Speaking,f4,INTEGER,t,,0,10,,,f,,,,f,,,core,person_languages,speaking
+189,EMLAN,Listening,f5,INTEGER,t,,0,10,,,f,,,,f,,,core,person_languages,listening
+190,EMLAN,Is Native,f6,BOOLEAN,t,,,,,,f,,,,f,,,core,person_languages,is_native
+193,EMFAM,Family Relation Key,f2,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='FAMR',core,person_families,lov_famr
+194,EMFAM,Name,f3,TEXT,t,,,50,,,f,,,,f,,,core,person_families,name
+195,EMFAM,Gender Key,f4,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='GNDR',core,person_families,lov_gndr
+196,EMFAM,Birth Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,,,core,person_families,birth_date
+197,EMFAM,Education Level Key,f6,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='EDUL',core,person_families,lov_edul
+198,EMFAM,Occupation,f7,TEXT,f,NULL,,20,,,f,,,,f,VALUE,,core,person_families,occupation
+199,EMFAM,Address,f8,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,person_families,address
+200,EMFAM,Phone,f9,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,person_families,phone
+201,EMFAM,Is Emergency Contact,f10,BOOLEAN,t,,,,,,f,,,,f,,,core,person_families,is_emergency
+202,EMFAM,Description,f11,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,person_families,description
+203,EMFAM,Start Effective Date,f12,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,person_families,eff_begin
+204,EMFAM,End Effective Date,f13,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,person_families,eff_end
+207,EMREF,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,person_references,name
+208,EMREF,Relationship,f3,TEXT,t,,,50,,,f,,,,f,,,core,person_references,relationship
+209,EMREF,Description,f4,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,person_references,description
+210,EMREF,Phone,f5,TEXT,f,NULL,,50,,,f,,,,f,VALUE,,core,person_references,phone
+213,EMDOC,Document Type Key,f2,TEXT,t,,,10,,,t,core,lovs,key_data,f,,lov_type_code='DCTY',core,person_documents,lov_dcty
+214,EMDOC,Name,f3,TEXT,t,,,50,,,f,,,,f,,,core,person_documents,name
+215,EMDOC,Expired Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,VALUE,,core,person_documents,expired
+216,EMDOC,File Name,f5,FILE,t,,,50,,,f,,,,f,,,core,person_documents,file_document
+218,JOCAT,Code,f1,TEXT,t,,,50,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,job_categories,code
+219,JOCAT,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,job_categories,name
+220,JOCAT,Description,f3,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,job_categories,description
+221,JOCAT,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,job_categories,eff_begin
+222,JOCAT,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,job_categories,eff_end
+223,WOCONTYP,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,working_condition_types,code
+224,WOCONTYP,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,working_condition_types,name
+225,WOCONTYP,Description,f3,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,working_condition_types,description
+226,WOCONTYP,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,working_condition_types,eff_begin
+227,WOCONTYP,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,working_condition_types,eff_end
+228,WOCON,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,working_conditions,code
+229,WOCON,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,working_conditions,name
+230,WOCON,Working Condition Type Code,f3,TEXT,t,,,20,,,t,core,working_condition_types,code,f,,,core,working_conditions,working_condition_type_code
+231,WOCON,Description,f4,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,working_conditions,description
+184,EMEDU,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_educations,person_id
+191,EMLAN,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_languages,person_id
+192,EMFAM,Employee ID,f1,TEXT,t,,,,,,t,,,,f,,,,,
+205,EMFAM,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_families,person_id
+211,EMREF,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,id,,core,person_references,person_id
+206,EMREF,Employee ID,f1,TEXT,t,,,,,,t,,,,f,,,,,
+212,EMDOC,Employee ID,f1,TEXT,t,,,,,,t,,,,f,,,,,
+217,EMDOC,Person ID,,INTEGER,f,f1,,,,,f,core,assignments,employee_id,t,,id,core,person_documents,person_id
+232,WOCON,Start Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,working_conditions,eff_begin
+233,WOCON,End Effective Date,f6,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,working_conditions,eff_end
+234,POSWOCON,Position Code,f1,TEXT,t,,,20,,,t,core,positions,code,f,,,core,position_working_conditions,position_code
+235,POSWOCON,Description,f2,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,position_working_conditions,description
+236,POSWOCON,Is Essential,f3,BOOLEAN,t,,,,,,f,,,,f,,,core,position_working_conditions,is_essential
+237,POSWOCON,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,position_working_conditions,eff_begin
+238,POSWOCON,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,position_working_conditions,eff_end
+239,JOBWOCON,Job Code,f1,TEXT,t,,,20,,,t,core,jobs,code,f,,,core,position_working_conditions,job_code
+240,JOBWOCON,Description,f2,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,position_working_conditions,description
+241,JOBWOCON,Is Essential,f3,BOOLEAN,t,,,,,,f,,,,f,,,core,position_working_conditions,is_essential
+242,JOBWOCON,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,position_working_conditions,eff_begin
+243,JOBWOCON,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,position_working_conditions,eff_end
+244,RESPGR,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,responsibility_groups,code
+245,RESPGR,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,responsibility_groups,name
+246,RESPGR,Description,f3,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,responsibility_groups,description
+247,RESPGR,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,responsibility_groups,eff_begin
+248,RESPGR,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,responsibility_groups,eff_end
+249,RESP,Code,f1,TEXT,t,,,20,,"^[a-zA-Z0-9_-]{1,20}$",f,,,,f,AUTO,,core,responsibilities,code
+250,RESP,Name,f2,TEXT,t,,,50,,,f,,,,f,,,core,responsibilities,name
+251,RESP,Responsibility Group Code,f3,TEXT,t,,,20,,,t,core,responsibility_groups,code,f,,,core,responsibilities,responsibility_group_code
+252,RESP,Description,f4,TEXT,f,NULL,,255,,,f,,,,f,VALUE,,core,responsibilities,description
+253,RESP,Start Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,responsibilities,eff_begin
+254,RESP,End Effective Date,f6,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,responsibilities,eff_end
+255,JORESP,Job Code,f1,TEXT,t,,,20,,,t,core,jobs,code,f,,,core,job_responsibilities,job_code
+256,JORESP,Description,f2,TEXT,t,,,255,,,f,,,,f,VALUE,,core,job_responsibilities,description
+257,JORESP,Is Appraisal,f3,BOOLEAN,t,,,,,,f,,,,f,,,core,job_responsibilities,is_appraisal
+258,JORESP,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,job_responsibilities,eff_begin
+259,JORESP,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,job_responsibilities,eff_end
+260,PORESP,Position Code,f1,TEXT,t,,,20,,,t,core,jobs,code,f,,,core,position_responsibilities,position_code
+261,PORESP,Description,f2,TEXT,t,,,255,,,f,,,,f,VALUE,,core,position_responsibilities,description
+262,PORESP,Is Appraisal,f3,BOOLEAN,t,,,,,,f,,,,f,,,core,position_responsibilities,is_appraisal
+263,PORESP,Start Effective Date,f4,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,core,position_responsibilities,eff_begin
+264,PORESP,End Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,core,position_responsibilities,eff_end
+265,EMQUOTA,Employee ID,f1,TEXT,t,,,20,,,f,,,,f,,,time,employee_quotas,employee_id
+266,EMQUOTA,Leave Code,f2,TEXT,t,,,20,,,f,,,,f,,,time,employee_quotas,leave_code
+267,EMQUOTA,Maximum Quota,f3,INTEGER,t,,,,,,f,,,,f,,,time,employee_quotas,max_quota
+268,EMQUOTA,Carried Quota,f4,INTEGER,t,,,,,,f,,,,f,,,time,employee_quotas,carried_quota
+269,EMQUOTA,Start Effective Date,f5,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MIN_DATE,,time,employee_quotas,eff_begin
+270,EMQUOTA,End Effective Date,f6,DATE,t,,,,,^(0?[1-9]|[12][0-9]|3[01])([ \/\-])(0?[1-9]|1[012])\2([0-9][0-9][0-9][0-9])(([ -])([0-1]?[0-9]|2[0-3]):[0-5]?[0-9]:[0-5]?[0-9])?$,f,,,,f,MAX_DATE,,time,employee_quotas,eff_end
+133,EMMBR,Person ID,,INTEGER,f,f2,,,,,f,core,assignments,employee_id,t,id,,core,person_memberships,person_id
+185,EMLAN,Employee ID,f1,TEXT,t,,,,,,t,,,,f,,,,,

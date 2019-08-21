@@ -1,0 +1,6 @@
+projectKey=linov-core
+serverUrl=http://localhost:9000
+serverVersion=7.9.1.27448
+dashboardUrl=http://localhost:9000/dashboard?id=linov-core
+ceTaskId=AWyuUe1Rflq95A6Jtw7o
+ceTaskUrl=http://localhost:9000/api/ce/task?id=AWyuUe1Rflq95A6Jtw7o

@@ -1,0 +1,866 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Person Reward",
+		"_postman_id": "3147f11d-55fb-ee12-3961-f1c4078716a7",
+		"description": "Enable user to perform CRUD operations on person reward.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"url": "http://localhost:8000/core/personReward/getAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "2e6eef43-106a-4cb8-b2c7-26b7c37b8fb5",
+					"name": "getAll",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/personReward/getAll",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "drife.mydocker.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2017 08:57:16 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "78",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 84,
+					"body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":2,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"rewardId\":2,\"rewardName\":\"Chocolate 5kg\",\"description\":\"blahblahblah\"}]}"
+				}
+			]
+		},
+		{
+			"name": "getOne",
+			"request": {
+				"url": "http://localhost:8000/core/personReward/getOne",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"id\": 2\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "31321c16-891a-4ccb-9fd4-7690656d19a5",
+					"name": "getOne",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/personReward/getOne",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "drife.mydocker.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"id\": 2\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2017 08:57:57 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "104",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 110,
+					"body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":2,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"rewardId\":2,\"rewardCode\":\"RW1\",\"rewardName\":\"Chocolate 5kg\",\"rewardDescription\":\"Blahblahblahchocoblah\",\"description\":\"blahblahblah\",\"lovRwty\":\"R\"}}"
+				}
+			]
+		},
+		{
+			"name": "save",
+			"request": {
+				"url": "http://localhost:8000/core/personReward/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"rewardId\": 2,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"description\": \"blahblahblah\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "c3602c58-7545-4a69-95a8-3cc040dce90d",
+					"name": "save",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/personReward/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "drife.mydocker.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"rewardId\": 2,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"description\": \"blahblahblah\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2017 08:57:05 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "572",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 581,
+					"body": "{\"status\":200,\"message\":\"Data saved\",\"data\":{\"id\":2}}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://localhost:8000/core/personReward/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"id\": 2,\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"rewardId\": 2,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"description\": \"AAAAAAAAAAAA\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "507e8d92-1c97-44f7-8026-1cd8ace33193",
+					"name": "update",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/personReward/update",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "drife.mydocker.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"id\": 2,\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"rewardId\": 2,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"description\": \"AAAAAAAAAAAA\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2017 08:59:01 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "596",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 612,
+					"body": "{\"status\":200,\"message\":\"Data updated\",\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://localhost:8000/core/personReward/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"id\": 1\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "9ca8a363-4b4b-494e-b938-89996a89e21f",
+					"name": "delete",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/personReward/delete",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+								"description": ""
+							},
+							{
+								"key": "Origin",
+								"value": "drife.mydocker.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"personId\": 1,\n\t\"id\": 1\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2017 08:59:42 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "114",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 123,
+					"body": "{\"status\":200,\"message\":\"Data deleted\",\"data\":null}"
+				}
+			]
+		}
+	]
+}

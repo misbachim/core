@@ -1,0 +1,736 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Lov",
+		"_postman_id": "5d04ca4f-2769-1480-a8cb-fdb0f186af44",
+		"description": "Enable user to perform CRUD operations on LOVs.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getAll",
+			"request": {
+				"url": "http://localhost:8000/core/lov/getAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"typeCode\": \"LANG\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "2eaef90c-c21d-4b4b-abbe-29401780fa46",
+					"name": "getAll",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/lov/getAll",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"typeCode\": \"LANG\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 09:00:28 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "1",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "112",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 143,
+					"body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"keyData\":\"EN\",\"valData\":\"ENGLISH\",\"lovTypeCode\":\"LANG\",\"lovTypeName\":\"LANGUAGE\"},{\"keyData\":\"ID\",\"valData\":\"BAHASA INDONESIA\",\"lovTypeCode\":\"LANG\",\"lovTypeName\":\"LANGUAGE\"}]}"
+				}
+			]
+		},
+		{
+			"name": "getOne",
+			"request": {
+				"url": "http://localhost:8000/core/lov/getOne",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"keyData\": \"IDR\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "f2436d19-58e4-40d5-b8da-e0ae00a044fb",
+					"name": "getOne",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/lov/getOne",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"keyData\": \"IDR\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 09:00:43 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "65",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 71,
+					"body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"keyData\":\"IDR\",\"valData\":\"INDONESIAN RUPIAH\",\"lovTypeCode\":\"CURR\",\"lovTypeName\":\"CURRENCY\"}}"
+				}
+			]
+		},
+		{
+			"name": "save",
+			"request": {
+				"url": "http://localhost:8000/core/lov/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"keyData\": \"XXX\",\n\t\"typeCode\": \"RLGN\",\n\t\"valData\": \"Blank\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "b7372168-c83c-4ab9-93b2-d1a272e87ea6",
+					"name": "save",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/lov/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"keyData\": \"XXX\",\n\t\"typeCode\": \"RLGN\",\n\t\"valData\": \"Blank\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 09:00:57 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "567",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 572,
+					"body": "{\"status\":200,\"message\":\"Data saved\",\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://localhost:8000/core/lov/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 1900000000,\n\t\"curKeyData\": \"YYY\",\n\t\"keyData\": \"CCC\",\n\t\"typeCode\": \"RLGN\",\n\t\"valData\": \"Oops\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "7f939b72-39d5-46e6-b153-84f3ad9fff09",
+					"name": "update",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/lov/update",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 1900000000,\n\t\"curKeyData\": \"YYY\",\n\t\"keyData\": \"CCC\",\n\t\"typeCode\": \"RLGN\",\n\t\"valData\": \"Oops\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 09:01:09 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "86",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 89,
+					"body": "{\"status\":200,\"message\":\"Data updated\",\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://localhost:8000/core/lov/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"keyData\": \"CCC\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "7ebf6163-896d-47db-9929-fa65d1198202",
+					"name": "delete",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/lov/delete",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"keyData\": \"CCC\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 09:01:21 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "71",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 79,
+					"body": "{\"status\":200,\"message\":\"Data deleted\",\"data\":null}"
+				}
+			]
+		}
+	]
+}

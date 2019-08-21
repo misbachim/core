@@ -1,0 +1,857 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Location",
+    "description": "Enable user to perform CRUD operations on location.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/location",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "id": 1,
+        "companyId": 17751
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id",
+        "companyId"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "taxOfficeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "calendarId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        },
+        "district": {
+          "description": "",
+          "type": "string"
+        },
+        "city": {
+          "description": "",
+          "type": "string"
+        },
+        "province": {
+          "description": "",
+          "type": "string"
+        },
+        "provinceId": {
+          "description": "",
+          "type": "string"
+        },
+        "country": {
+          "description": "",
+          "type": "string"
+        },
+        "countryId": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "description",
+        "name",
+        "taxOfficeCode",
+        "calendarId",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax",
+        "district",
+        "city",
+        "province",
+        "provinceId",
+        "country",
+        "countryId"
+      ]
+    },
+    "SaveRequest": {
+      "title": "saveRequest",
+      "example": {
+        "companyId": 17751,
+        "effBegin": "2017-01-01",
+        "effEnd": "2099-12-31",
+        "name": "Kantor Pusat",
+        "description": "Kantor Pusat Jakarta",
+        "taxOfficeCode": "TAX",
+        "calendarId": 1,
+        "cityId": 2,
+        "districtId": 2,
+        "address": "ini alamatnya",
+        "postalCode": "12312321",
+        "phone": "31234 314123124 213",
+        "fax": "1234 4567 8907"
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "taxOfficeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "calendarId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "companyId",
+        "effBegin",
+        "effEnd",
+        "name",
+        "description",
+        "taxOfficeCode",
+        "calendarId",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "UpdateRequest": {
+      "title": "updateRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 7,
+        "effBegin": "2017-01-01",
+        "effEnd": "2099-12-31",
+        "name": "Kantor Pusat",
+        "description": "Kantor Pusat Jakarta",
+        "taxOfficeCode": "TAX",
+        "calendarId": 1,
+        "cityId": 2,
+        "districtId": 2,
+        "address": "ini alamatnya bung",
+        "postalCode": "12312321",
+        "phone": "31234 314123124 213",
+        "fax": "1234 4567 8907"
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "taxOfficeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "calendarId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "companyId",
+        "id",
+        "effBegin",
+        "effEnd",
+        "name",
+        "description",
+        "taxOfficeCode",
+        "calendarId",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 10
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "id"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "companyId": 17751
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Data"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    }
+  }
+}

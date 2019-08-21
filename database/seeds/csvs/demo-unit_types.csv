@@ -1,0 +1,6 @@
+tenant_id,company_id,code,name,unit_level,created_by,created_at,updated_by,updated_at
+1234567890,1234567890,DIR,Directorat,1,0,2018-01-01,,
+1234567890,1234567890,DIV,Division,2,0,2018-01-01,,
+1234567890,1234567890,SUBDIV,Sub Division,3,0,2018-01-01,,
+1234567890,1234567890,DEP,Departement,4,0,2018-01-01,,
+1234567890,1234567890,SEC,Section,5,0,2018-01-01,,

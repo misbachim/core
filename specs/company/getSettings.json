@@ -1,0 +1,66 @@
+{
+    "post": {
+        "tags": ["company"],
+        "summary": "Get setting information on companies",
+        "description": "Return information on company settings that the user has access to.",
+        "operationId": "getCompanySettings",
+        "parameters": [
+            {
+                "name": "Company Basic Information",
+                "description": "List of target company's basic information",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "companyIds": {
+                            "schema": {
+                                "type": "array",
+                                "items": {
+                                    "schema": {
+                                        "type": "object",
+                                        "properties": {
+                                            "id": {
+                                                "type": "integer"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    },
+                    "example": {
+                        "companyIds": [
+                            17005,
+                            19000000,
+                            165347
+                        ]
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "company settings information retrieved (exclude: $$ref)",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "schemas/company-setting.json"
+                        }
+                    },
+                    "example": [
+                        { "$ref": "examples/company-setting.json#/0" },
+                        { "$ref": "examples/company-setting.json#/0" }
+                    ]
+                }
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

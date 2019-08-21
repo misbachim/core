@@ -1,0 +1,824 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Lov",
+    "description": "Enable user to perform CRUD operations on LOVs.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/lov",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "All data retrieved",
+                "data": [
+                  {
+                    "keyData": "EN",
+                    "valData": "ENGLISH",
+                    "lovTypeCode": "LANG",
+                    "lovTypeName": "LANGUAGE"
+                  },
+                  {
+                    "keyData": "ID",
+                    "valData": "BAHASA INDONESIA",
+                    "lovTypeCode": "LANG",
+                    "lovTypeName": "LANGUAGE"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getAll",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 1900000000,\n\t\"typeCode\": \"LANG\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 29 Sep 2017 09:00:28 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "1",
+                "X-Kong-Upstream-Latency": "112",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"keyData\":\"EN\",\"valData\":\"ENGLISH\",\"lovTypeCode\":\"LANG\",\"lovTypeName\":\"LANGUAGE\"},{\"keyData\":\"ID\",\"valData\":\"BAHASA INDONESIA\",\"lovTypeCode\":\"LANG\",\"lovTypeName\":\"LANGUAGE\"}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getAll",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "keyData": "IDR",
+                  "valData": "INDONESIAN RUPIAH",
+                  "lovTypeCode": "CURR",
+                  "lovTypeName": "CURRENCY"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 1900000000,\n\t\"keyData\": \"IDR\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 29 Sep 2017 09:00:43 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "65",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"keyData\":\"IDR\",\"valData\":\"INDONESIAN RUPIAH\",\"lovTypeCode\":\"CURR\",\"lovTypeName\":\"CURRENCY\"}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "companyId": 1900000000,
+        "typeCode": "LANG"
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "typeCode": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "companyId",
+        "typeCode"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "example": {
+        "status": 200,
+        "message": "All data retrieved",
+        "data": [
+          {
+            "keyData": "EN",
+            "valData": "ENGLISH",
+            "lovTypeCode": "LANG",
+            "lovTypeName": "LANGUAGE"
+          },
+          {
+            "keyData": "ID",
+            "valData": "BAHASA INDONESIA",
+            "lovTypeCode": "LANG",
+            "lovTypeName": "LANGUAGE"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Datum": {
+      "title": "Datum",
+      "type": "object",
+      "properties": {
+        "keyData": {
+          "description": "",
+          "type": "string"
+        },
+        "valData": {
+          "description": "",
+          "type": "string"
+        },
+        "lovTypeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "lovTypeName": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyData",
+        "valData",
+        "lovTypeCode",
+        "lovTypeName"
+      ]
+    },
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "companyId": 1900000000,
+        "keyData": "IDR"
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "keyData": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "companyId",
+        "keyData"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "keyData": "IDR",
+          "valData": "INDONESIAN RUPIAH",
+          "lovTypeCode": "CURR",
+          "lovTypeName": "CURRENCY"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "keyData": {
+          "description": "",
+          "type": "string"
+        },
+        "valData": {
+          "description": "",
+          "type": "string"
+        },
+        "lovTypeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "lovTypeName": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyData",
+        "valData",
+        "lovTypeCode",
+        "lovTypeName"
+      ]
+    },
+    "SaveRequest": {
+      "title": "saveRequest",
+      "example": {
+        "companyId": 1900000000,
+        "keyData": "XXX",
+        "typeCode": "RLGN",
+        "valData": "Blank"
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "keyData": {
+          "description": "",
+          "type": "string"
+        },
+        "typeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "valData": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "companyId",
+        "keyData",
+        "typeCode",
+        "valData"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "UpdateRequest": {
+      "title": "updateRequest",
+      "example": {
+        "companyId": 1900000000,
+        "curKeyData": "YYY",
+        "keyData": "CCC",
+        "typeCode": "RLGN",
+        "valData": "Oops"
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "curKeyData": {
+          "description": "",
+          "type": "string"
+        },
+        "keyData": {
+          "description": "",
+          "type": "string"
+        },
+        "typeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "valData": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "companyId",
+        "curKeyData",
+        "keyData",
+        "typeCode",
+        "valData"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "keyData": "CCC"
+      },
+      "type": "object",
+      "properties": {
+        "keyData": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "keyData"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    }
+  }
+}

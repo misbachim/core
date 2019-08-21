@@ -1,0 +1,1208 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Person Address",
+    "description": "Enable user to perform CRUD operations on person address.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/personAddress",
+  "securityDefinitions": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "http://localhost:8000/core/personAddress",
+      "scopes": {}
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "All data retrieved",
+                "data": [
+                  {
+                    "id": 1,
+                    "effBegin": "2017-10-01",
+                    "effEnd": "2018-10-01",
+                    "lovRsty": "HOM",
+                    "lovRsow": "OWN",
+                    "cityId": 1,
+                    "districtId": 1,
+                    "address": "Sudirman Putra",
+                    "postalCode": "BS3 4JN",
+                    "phone": "+62801231231",
+                    "fax": "06212131231",
+                    "mapLocation": "128.56, 359.24"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getAll",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+                "Origin": "drife.mydocker.com"
+              },
+              "body": "{\n\t\"personId\": 1\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 06 Oct 2017 07:21:29 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "96",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":1,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"lovRsty\":\"HOM\",\"lovRsow\":\"OWN\",\"cityId\":1,\"districtId\":1,\"address\":\"Sudirman Putra\",\"postalCode\":\"BS3 4JN\",\"phone\":\"+62801231231\",\"fax\":\"06212131231\",\"mapLocation\":\"128.56, 359.24\"}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getAll",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "id": 1,
+                  "effBegin": "2017-10-01",
+                  "effEnd": "2018-10-01",
+                  "lovRsty": "HOM",
+                  "lovRsow": "OWN",
+                  "cityId": 1,
+                  "districtId": 1,
+                  "address": "Sudirman Putra",
+                  "postalCode": "BS3 4JN",
+                  "phone": "+62801231231",
+                  "fax": "06212131231",
+                  "mapLocation": "128.56, 359.24"
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+                "Origin": "drife.mydocker.com"
+              },
+              "body": "{\n\t\"personId\": 1,\n\t\"id\": 1\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 06 Oct 2017 07:21:39 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "76",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":1,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"lovRsty\":\"HOM\",\"lovRsow\":\"OWN\",\"cityId\":1,\"districtId\":1,\"address\":\"Sudirman Putra\",\"postalCode\":\"BS3 4JN\",\"phone\":\"+62801231231\",\"fax\":\"06212131231\",\"mapLocation\":\"128.56, 359.24\"}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data saved",
+                "data": {
+                  "id": 1
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/save",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+                "Origin": "drife.mydocker.com"
+              },
+              "body": "{\n\t\"personId\": 1,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"lovRsty\": \"HOM\",\n\t\"lovRsow\": \"OWN\",\n\t\"cityId\": 1,\n\t\"districtId\": 1,\n\t\"address\": \"Sudirman Putra\",\n\t\"postalCode\": \"BS3 4JN\",\n\t\"phone\": \"+62801231231\",\n\t\"fax\": \"06212131231\",\n\t\"mapLocation\": \"128.56, 359.24\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 06 Oct 2017 07:21:15 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "597",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data saved\",\"data\":{\"id\":1}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "save",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "personId": 1
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "personId"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "example": {
+        "status": 200,
+        "message": "All data retrieved",
+        "data": [
+          {
+            "id": 1,
+            "effBegin": "2017-10-01",
+            "effEnd": "2018-10-01",
+            "lovRsty": "HOM",
+            "lovRsow": "OWN",
+            "cityId": 1,
+            "districtId": 1,
+            "address": "Sudirman Putra",
+            "postalCode": "BS3 4JN",
+            "phone": "+62801231231",
+            "fax": "06212131231",
+            "mapLocation": "128.56, 359.24"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Datum": {
+      "title": "Datum",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsty": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsow": {
+          "description": "",
+          "type": "string"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        },
+        "mapLocation": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "lovRsty",
+        "lovRsow",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax",
+        "mapLocation"
+      ]
+    },
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "personId": 1,
+        "id": 1
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "personId",
+        "id"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "id": 1,
+          "effBegin": "2017-10-01",
+          "effEnd": "2018-10-01",
+          "lovRsty": "HOM",
+          "lovRsow": "OWN",
+          "cityId": 1,
+          "districtId": 1,
+          "address": "Sudirman Putra",
+          "postalCode": "BS3 4JN",
+          "phone": "+62801231231",
+          "fax": "06212131231",
+          "mapLocation": "128.56, 359.24"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsty": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsow": {
+          "description": "",
+          "type": "string"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        },
+        "mapLocation": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "lovRsty",
+        "lovRsow",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax",
+        "mapLocation"
+      ]
+    },
+    "SaveRequest": {
+      "title": "saveRequest",
+      "example": {
+        "personId": 1,
+        "effBegin": "2017-10-1",
+        "effEnd": "2018-10-1",
+        "lovRsty": "HOM",
+        "lovRsow": "OWN",
+        "cityId": 1,
+        "districtId": 1,
+        "address": "Sudirman Putra",
+        "postalCode": "BS3 4JN",
+        "phone": "+62801231231",
+        "fax": "06212131231",
+        "mapLocation": "128.56, 359.24"
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsty": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsow": {
+          "description": "",
+          "type": "string"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        },
+        "mapLocation": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "personId",
+        "effBegin",
+        "effEnd",
+        "lovRsty",
+        "lovRsow",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax",
+        "mapLocation"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "example": {
+        "status": 200,
+        "message": "Data saved",
+        "data": {
+          "id": 1
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data8"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data8": {
+      "title": "Data8",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "UpdateRequest": {
+      "title": "updateRequest",
+      "example": {
+        "personId": 1,
+        "id": 1,
+        "effBegin": "2017-10-1",
+        "effEnd": "2018-10-1",
+        "lovRsty": "HOM",
+        "lovRsow": "OWN",
+        "cityId": 1,
+        "districtId": 1,
+        "address": "Sudirman Putri",
+        "postalCode": "BS3 4JN",
+        "phone": "+62801231231",
+        "fax": "06212131231",
+        "mapLocation": "128.56, 359.24"
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsty": {
+          "description": "",
+          "type": "string"
+        },
+        "lovRsow": {
+          "description": "",
+          "type": "string"
+        },
+        "cityId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "districtId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "address": {
+          "description": "",
+          "type": "string"
+        },
+        "postalCode": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "fax": {
+          "description": "",
+          "type": "string"
+        },
+        "mapLocation": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "personId",
+        "id",
+        "effBegin",
+        "effEnd",
+        "lovRsty",
+        "lovRsow",
+        "cityId",
+        "districtId",
+        "address",
+        "postalCode",
+        "phone",
+        "fax",
+        "mapLocation"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "personId": 1,
+        "id": 1
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "personId",
+        "id"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    }
+  }
+}

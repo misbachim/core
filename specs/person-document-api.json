@@ -1,0 +1,896 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Person Document",
+    "description": "Enable user to perform CRUD operations on person document.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/personDocument",
+  "securityDefinitions": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "http://localhost:8000/core/personDocument",
+      "scopes": {}
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "id": 2,
+                  "name": "Curriculum Vitae",
+                  "lovDcty": "CV",
+                  "validUntil": "2018-12-31",
+                  "fileDocument": "file/doc/NjI0ZmE3YzAtYWNjNy0xMWU3LWE4NTAtMWI4OTQ0NzM3OTI3KkhhbmRvdmVyIE1hdGVyaWFsLnBkZg=="
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3NjAxNjQ5LCJuYmYiOjE1MDc1MTUyNDksImlhdCI6MTUwNzUxNTI0OSwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzUxNTI0OSIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.R-8KDpr_4cg114o2IV49uyj59ab7iwlFwfIlxTHD2mBo7t2Eo6kuYZAigIJLLKwwwD7yJ3IMNhCgmuPfsx5Znt997ylRR8QDncIrEtu2fNQQa0sTTeXQ5mZhHEjz5zznaMgqSYhZxzLOn5cKET6fz3cCJto4HJsorZx9e3xdhXWtVZFzPRDH6924ZVTfYfo9bYl-rX_U9Ke2O8ktKEHu0YovJ4-sIhTWO4zGgaHYyi5AHNGZxw5YAHCWxrzEnr2lL69JuYpV6ncxylWY0MmZ6Tft1hdvf54mVARO-JdFIDK5VfqNReeWDx-6RkpKC8jaTePo320mVW1eQcPTMfGiSQ",
+                "Origin": "drife.mydocker.com"
+              },
+              "body": "{\n\t\"personId\": 1,\n\t\"id\": 2\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Access-Control-Allow-Origin": "*",
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Mon, 09 Oct 2017 07:57:18 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "78",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":2,\"name\":\"Curriculum Vitae\",\"lovDcty\":\"CV\",\"validUntil\":\"2018-12-31\",\"fileDocument\":\"file\\/doc\\/NjI0ZmE3YzAtYWNjNy0xMWU3LWE4NTAtMWI4OTQ0NzM3OTI3KkhhbmRvdmVyIE1hdGVyaWFsLnBkZg==\"}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "upload",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "docTypes[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "fileContents[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data saved",
+                "data": {
+                  "uploaded": true,
+                  "id": 2
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "upload",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "docTypes[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "fileContents[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data updated",
+                "data": {
+                  "uploaded": true
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/delete",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com",
+                "Authorization": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3NjAxNjQ5LCJuYmYiOjE1MDc1MTUyNDksImlhdCI6MTUwNzUxNTI0OSwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzUxNTI0OSIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.R-8KDpr_4cg114o2IV49uyj59ab7iwlFwfIlxTHD2mBo7t2Eo6kuYZAigIJLLKwwwD7yJ3IMNhCgmuPfsx5Znt997ylRR8QDncIrEtu2fNQQa0sTTeXQ5mZhHEjz5zznaMgqSYhZxzLOn5cKET6fz3cCJto4HJsorZx9e3xdhXWtVZFzPRDH6924ZVTfYfo9bYl-rX_U9Ke2O8ktKEHu0YovJ4-sIhTWO4zGgaHYyi5AHNGZxw5YAHCWxrzEnr2lL69JuYpV6ncxylWY0MmZ6Tft1hdvf54mVARO-JdFIDK5VfqNReeWDx-6RkpKC8jaTePo320mVW1eQcPTMfGiSQ",
+                "Origin": "drife.mydocker.com"
+              },
+              "body": "{\n\t\"personId\": 1,\n\t\"id\": 2\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "delete",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "personId": 1
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "personId"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Datum": {
+      "title": "Datum",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "lovDcty": {
+          "description": "",
+          "type": "string"
+        },
+        "validUntil": {
+          "description": "",
+          "type": "string"
+        },
+        "fileDocument": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "lovDcty",
+        "validUntil",
+        "fileDocument"
+      ]
+    },
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "personId": 1,
+        "id": 2
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "personId",
+        "id"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "id": 2,
+          "name": "Curriculum Vitae",
+          "lovDcty": "CV",
+          "validUntil": "2018-12-31",
+          "fileDocument": "file/doc/NjI0ZmE3YzAtYWNjNy0xMWU3LWE4NTAtMWI4OTQ0NzM3OTI3KkhhbmRvdmVyIE1hdGVyaWFsLnBkZg=="
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "lovDcty": {
+          "description": "",
+          "type": "string"
+        },
+        "validUntil": {
+          "description": "",
+          "type": "string"
+        },
+        "fileDocument": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "lovDcty",
+        "validUntil",
+        "fileDocument"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "example": {
+        "status": 200,
+        "message": "Data saved",
+        "data": {
+          "uploaded": true,
+          "id": 2
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data7"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data7": {
+      "title": "Data7",
+      "type": "object",
+      "properties": {
+        "uploaded": {
+          "description": "",
+          "type": "boolean"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "uploaded",
+        "id"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "example": {
+        "status": 200,
+        "message": "Data updated",
+        "data": {
+          "uploaded": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data9"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data9": {
+      "title": "Data9",
+      "type": "object",
+      "properties": {
+        "uploaded": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "uploaded"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "personId": 1,
+        "id": 2
+      },
+      "type": "object",
+      "properties": {
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "personId",
+        "id"
+      ]
+    }
+  }
+}

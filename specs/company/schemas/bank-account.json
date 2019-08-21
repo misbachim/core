@@ -1,0 +1,12 @@
+{
+    "type": "object",
+    "properties": {
+        "companyId": { "type": "integer" },
+        "id": { "type": "integer" },
+        "accNumber": { "type": "string" },
+        "accName": { "type": "string" }
+    },
+    "example": {
+        "$ref": "../examples/bank-account.json#/0"
+    }
+}

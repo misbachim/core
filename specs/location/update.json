@@ -1,0 +1,30 @@
+{
+    "post": {
+        "tags": ["location"],
+        "summary": "Update location information",
+        "description": "Update information on a location that the user has access to.",
+        "operationId": "updateLocation",
+        "parameters": [
+            {
+                "name": "Location Full Information",
+                "description": "Target location's full information (exclude: $$ref)",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "schemas/location.json"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "location information updated"
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

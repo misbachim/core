@@ -1,0 +1,38 @@
+{
+    "post": {
+        "tags": ["location"],
+        "summary": "Delete location information",
+        "description": "Delete information on one location that the user has access to.",
+        "operationId": "deleteLocation",
+        "parameters": [
+            {
+                "name": "Location Basic Information",
+                "description": "Target location's basic information",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "companyId": {
+                            "type": "integer"
+                        },
+                        "id": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "location information deleted"
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

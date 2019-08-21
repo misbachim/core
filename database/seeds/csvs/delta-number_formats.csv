@@ -1,0 +1,13 @@
+tenant_id,company_id,employee_status_code,format,autonumber_id,created_by,created_at,updated_by,updated_at,lov_nbft
+1113223891,1113223891,,{{N*}},1,0,now(),,,LTASG
+1113223891,1113223891,,{{N*}},1,0,now(),,,LTGEMPST
+1113223891,1113223891,,{{N*}},1,0,now(),,,LTQEMPST
+1113223891,1113223891,,{{N*}},1,0,now(),,,LTLEAV
+1113223891,1113223891,,{{N*}},1,0,now(),,,LTPUNS
+1113223891,1113223891,,{{N*}},1,0,now(),,,LTACTEMP
+1113223891,1000000000,,{{N*}},1,0,now(),,,LTASG
+1113223891,1000000000,,{{N*}},1,0,now(),,,LTGEMPST
+1113223891,1000000000,,{{N*}},1,0,now(),,,LTQEMPST
+1113223891,1000000000,,{{N*}},1,0,now(),,,LTLEAV
+1113223891,1000000000,,{{N*}},1,0,now(),,,LTPUNS
+1113223891,1000000000,,{{N*}},1,0,now(),,,LTACTEMP

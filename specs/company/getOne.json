@@ -1,0 +1,38 @@
+{
+    "post": {
+        "tags": ["company"],
+        "summary": "Get information on a company",
+        "description": "Return information on one company that the user has access to.",
+        "operationId": "getOneCompany",
+        "parameters": [
+            {
+                "name": "Company Basic Information",
+                "description": "Target company's basic information",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "company information retrieved (exclude: id, $$ref)",
+                "schema": {
+                    "$ref": "schemas/company.json"
+                }
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

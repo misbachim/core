@@ -1,0 +1,5 @@
+tenant_id,company_id,name,created_by,created_at,updated_by,updated_at,starting_sequence,last_sequence
+1308437910,1161461929,No Surat,0,now(),,,1,
+1308437910,1347209935,No Surat,0,now(),,,1,
+1308437910,1161461929,NIK,0,now(),,,2,
+1308437910,1347209935,NIK,0,now(),,,2,

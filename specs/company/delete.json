@@ -1,0 +1,35 @@
+{
+    "post": {
+        "tags": ["company"],
+        "summary": "Delete company information",
+        "description": "Delete information on a company that the user has access to.",
+        "operationId": "deleteCompany",
+        "parameters": [
+            {
+                "name": "Company Basic Information",
+                "description": "Target company's basic information",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "company information deleted"
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

@@ -1,0 +1,949 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Company",
+    "description": "Enable user to perform CRUD operations on company.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/company",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "id": 17751,
+                  "effBegin": "2017-01-01",
+                  "effEnd": "2099-12-31",
+                  "code": "DRF",
+                  "name": "DRIFE",
+                  "description": "VISI MISI DRIFE ADALAH BLABLABLA",
+                  "fileLogo": "file/image/ODE1NTY2NTAtYTM1My0xMWU3LTgzMTMtYmJiYWY0NTQxMTkxKnRvbS5qcGc=",
+                  "companyTaxNumber": "3321259005",
+                  "locationId": 1,
+                  "lovCur": "IDR",
+                  "lovLang": "ID"
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n  \"id\" : 17751\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Mon, 02 Oct 2017 08:53:39 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "75",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":17751,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"code\":\"DRF\",\"name\":\"DRIFE\",\"description\":\"VISI MISI DRIFE ADALAH BLABLABLA\",\"fileLogo\":\"file\\/image\\/ODE1NTY2NTAtYTM1My0xMWU3LTgzMTMtYmJiYWY0NTQxMTkxKnRvbS5qcGc=\",\"companyTaxNumber\":\"3321259005\",\"locationId\":1,\"lovCur\":\"IDR\",\"lovLang\":\"ID\"}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Company information as JSON string"
+          },
+          {
+            "name": "docTypes[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "List of document (file) types"
+          },
+          {
+            "name": "fileContents[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "List of file contents"
+          },
+          {
+            "name": "upload",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data saved",
+                "data": {
+                  "uploaded": true,
+                  "id": 1252396271
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "Company information as JSON string"
+          },
+          {
+            "name": "docTypes[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "List of document (file) types"
+          },
+          {
+            "name": "fileContents[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": "List of file contents"
+          },
+          {
+            "name": "upload",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data updated",
+                "data": {
+                  "uploaded": true
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getSettings": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getSettings",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getSettings",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetSettingsRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetSettingsResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "All data retrieved",
+                "data": [
+                  {
+                    "companyId": 1900000000,
+                    "companyName": "DRIFE",
+                    "companyCode": "DRF",
+                    "setting": {
+                      "CURR": "USD",
+                      "LANG": "EN"
+                    }
+                  },
+                  {
+                    "companyId": 16092,
+                    "companyName": "Google",
+                    "companyCode": "GGL",
+                    "setting": {
+                      "LANG": "EN",
+                      "CURR": "USD"
+                    }
+                  },
+                  {
+                    "companyId": 1700000000,
+                    "companyName": "LAWENCON",
+                    "companyCode": "LWC",
+                    "setting": {
+                      "CURR": "IDR",
+                      "LANG": "JP"
+                    }
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getSettings",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyIds\": [1900000000, 1700000000, 16092]\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Tue, 03 Oct 2017 01:49:51 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "66",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"companyId\":1900000000,\"companyName\":\"DRIFE\",\"companyCode\":\"DRF\",\"setting\":{\"CURR\":\"USD\",\"LANG\":\"EN\"}},{\"companyId\":16092,\"companyName\":\"Google\",\"companyCode\":\"GGL\",\"setting\":{\"LANG\":\"EN\",\"CURR\":\"USD\"}},{\"companyId\":1700000000,\"companyName\":\"LAWENCON\",\"companyCode\":\"LWC\",\"setting\":{\"CURR\":\"IDR\",\"LANG\":\"JP\"}}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getSettings",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "id": 17751
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "id": 17751,
+          "effBegin": "2017-01-01",
+          "effEnd": "2099-12-31",
+          "code": "DRF",
+          "name": "DRIFE",
+          "description": "VISI MISI DRIFE ADALAH BLABLABLA",
+          "fileLogo": "file/image/ODE1NTY2NTAtYTM1My0xMWU3LTgzMTMtYmJiYWY0NTQxMTkxKnRvbS5qcGc=",
+          "companyTaxNumber": "3321259005",
+          "locationId": 1,
+          "lovCur": "IDR",
+          "lovLang": "ID"
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "fileLogo": {
+          "description": "",
+          "type": "string"
+        },
+        "companyTaxNumber": {
+          "description": "",
+          "type": "string"
+        },
+        "locationId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "lovCur": {
+          "description": "",
+          "type": "string"
+        },
+        "lovLang": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "code",
+        "name",
+        "description",
+        "fileLogo",
+        "companyTaxNumber",
+        "locationId",
+        "lovCur",
+        "lovLang"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "example": {
+        "status": 200,
+        "message": "Data saved",
+        "data": {
+          "uploaded": true,
+          "id": 1252396271
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data4"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data4": {
+      "title": "Data4",
+      "type": "object",
+      "properties": {
+        "uploaded": {
+          "description": "",
+          "type": "boolean"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "uploaded",
+        "id"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "example": {
+        "status": 200,
+        "message": "Data updated",
+        "data": {
+          "uploaded": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data6"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data6": {
+      "title": "Data6",
+      "type": "object",
+      "properties": {
+        "uploaded": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "uploaded"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "id": 27005
+      },
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "GetSettingsRequest": {
+      "title": "getSettingsRequest",
+      "example": {
+        "companyIds": [
+          1900000000,
+          1700000000,
+          16092
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "companyIds": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "integer",
+            "format": "int32"
+          }
+        }
+      },
+      "required": [
+        "companyIds"
+      ]
+    },
+    "GetSettingsResponse": {
+      "title": "getSettingsResponse",
+      "example": {
+        "status": 200,
+        "message": "All data retrieved",
+        "data": [
+          {
+            "companyId": 1900000000,
+            "companyName": "DRIFE",
+            "companyCode": "DRF",
+            "setting": {
+              "CURR": "USD",
+              "LANG": "EN"
+            }
+          },
+          {
+            "companyId": 16092,
+            "companyName": "Google",
+            "companyCode": "GGL",
+            "setting": {
+              "LANG": "EN",
+              "CURR": "USD"
+            }
+          },
+          {
+            "companyId": 1700000000,
+            "companyName": "LAWENCON",
+            "companyCode": "LWC",
+            "setting": {
+              "CURR": "IDR",
+              "LANG": "JP"
+            }
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Data11"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data11": {
+      "title": "Data11",
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "companyName": {
+          "description": "",
+          "type": "string"
+        },
+        "companyCode": {
+          "description": "",
+          "type": "string"
+        },
+        "setting": {
+          "$ref": "#/definitions/Setting"
+        }
+      },
+      "required": [
+        "companyId",
+        "companyName",
+        "companyCode",
+        "setting"
+      ]
+    },
+    "Setting": {
+      "title": "Setting",
+      "type": "object",
+      "properties": {
+        "CURR": {
+          "description": "",
+          "type": "string"
+        },
+        "LANG": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "CURR",
+        "LANG"
+      ]
+    }
+  }
+}

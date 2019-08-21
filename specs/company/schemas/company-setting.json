@@ -1,0 +1,24 @@
+{
+    "type": "object",
+    "properties": {
+        "companyId": { "type": "integer" },
+        "companyName": {"type": "string" },
+        "setting": {
+            "schema": {
+                "type": "array",
+                "items": {
+                    "schema": {
+                        "type": "object",
+                        "properties": {
+                            "lovTypeCode": { "type": "string" },
+                            "lovKeyData": { "type": "string" }
+                        }
+                    }
+                }
+            }
+        }
+    },
+    "example": {
+        "$ref": "../examples/company-setting.json#/0"
+    }
+}

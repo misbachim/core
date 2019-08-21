@@ -1,0 +1,3 @@
+tenant_id,company_id,id,code,name,description,eff_begin,eff_end,created_at,created_by,updated_at,updated_by
+1000000000,1700000000,4,RSC,Rating Scale Competency,Rating Scale untuk Data Competency,2018-09-12,9999-12-31,2018-09-12 09:21:58+00,1,,
+1000000000,1700000000,7,RSV1,Rating Scale Review,Rating Scale untuk Review,2018-09-24,9999-12-31,2018-09-24 07:00:06+00,1,,

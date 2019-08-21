@@ -1,0 +1,7 @@
+tenant_id,company_id,employee_status_code,format,autonumber_id,created_by,created_at,updated_by,updated_at,lov_nbft
+1350661397,1914678969,,{{N*}},1,0,now(),,,LTASG
+1350661397,1914678969,,{{N*}},1,0,now(),,,LTGEMPST
+1350661397,1914678969,,{{N*}},1,0,now(),,,LTQEMPST
+1350661397,1914678969,,{{N*}},1,0,now(),,,LTLEAV
+1350661397,1914678969,,{{N*}},1,0,now(),,,LTPUNS
+1350661397,1914678969,,{{N*}},1,0,now(),,,LTACTEMP

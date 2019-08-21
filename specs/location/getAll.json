@@ -1,0 +1,47 @@
+{
+    "post": {
+        "tags": ["location"],
+        "summary": "Get information on all locations of a company",
+        "description": "Return information on all company locations that the user has access to.",
+        "operationId": "getAllLocationsByCompany",
+        "parameters": [
+            {
+                "name": "Company Basic Information",
+                "description": "Target company's basic information",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "companyId": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "company locations information retrieved (exclude: companyId, $$ref)",
+                "schema": {
+                    "type": "array",
+                    "items": {
+                        "schema": {
+                            "$ref": "schemas/location.json"
+                        }
+                    },
+                    "example": [
+                        { "$ref": "examples/location.json#/0" },
+                        { "$ref": "examples/location.json#/1" }
+                    ]
+                }
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

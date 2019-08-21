@@ -1,0 +1,2 @@
+tenant_id,id,eff_begin,eff_end,name,description,company_tax_number,is_deleted,created_by,created_at,updated_by,updated_at,file_logo,location_code,tax_withholder_number,tax_withholder_name
+1735757575,1735757575,2018-01-01,9999-12-31,PT Paper Tech,PT Paper Tech,0,f,0,2018-09-26 00:00:00+00,1,2018-09-26 00:00:00+00,HQ,HO,Indri Wijasari,

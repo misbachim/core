@@ -1,0 +1,1148 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Job",
+    "description": "Enable user to perform CRUD operations on job.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/job",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "All data retrieved",
+                "data": [
+                  {
+                    "id": 2,
+                    "effBegin": "2017-10-01",
+                    "effEnd": "2018-10-01",
+                    "code": "MANAGER",
+                    "description": "Its responsibility includes blahblahblah",
+                    "ordinal": 3,
+                    "payRateId": 1,
+                    "payRateName": "Pay Rate 2",
+                    "jobFamilyId": 1,
+                    "jobFamilyName": "Job Family 2"
+                  },
+                  {
+                    "id": 4,
+                    "effBegin": "2017-10-01",
+                    "effEnd": "2018-10-01",
+                    "code": "MANAGER",
+                    "description": "Its responsibility includes blahblahblah",
+                    "ordinal": 3,
+                    "payRateId": 1,
+                    "payRateName": "Pay Rate 2",
+                    "jobFamilyId": 1,
+                    "jobFamilyName": "Job Family 2"
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getAll",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 17751\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Mon, 02 Oct 2017 06:31:28 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "86",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":2,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"code\":\"MANAGER\",\"description\":\"Its responsibility includes blahblahblah\",\"ordinal\":3,\"payRateId\":1,\"payRateName\":\"Pay Rate 2\",\"jobFamilyId\":1,\"jobFamilyName\":\"Job Family 2\"},{\"id\":4,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"code\":\"MANAGER\",\"description\":\"Its responsibility includes blahblahblah\",\"ordinal\":3,\"payRateId\":1,\"payRateName\":\"Pay Rate 2\",\"jobFamilyId\":1,\"jobFamilyName\":\"Job Family 2\"}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getAll",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "id": 4,
+                  "effBegin": "2017-10-01",
+                  "effEnd": "2018-10-01",
+                  "code": "MANAGER",
+                  "payRateId": 1,
+                  "jobFamilyId": 1,
+                  "description": "Its responsibility includes blahblahblah",
+                  "ordinal": 3,
+                  "grades": [
+                    {
+                      "id": 1,
+                      "name": "Low",
+                      "code": "D",
+                      "ordinal": 4
+                    },
+                    {
+                      "id": 2,
+                      "name": "Standard",
+                      "code": "C",
+                      "ordinal": 3
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 17751,\n\t\"id\": 4\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Mon, 02 Oct 2017 06:33:25 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "67",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":4,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"code\":\"MANAGER\",\"payRateId\":1,\"jobFamilyId\":1,\"description\":\"Its responsibility includes blahblahblah\",\"ordinal\":3,\"grades\":[{\"id\":1,\"name\":\"Low\",\"code\":\"D\",\"ordinal\":4},{\"id\":2,\"name\":\"Standard\",\"code\":\"C\",\"ordinal\":3}]}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data saved",
+                "data": {
+                  "id": 4
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/save",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 17751,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"payRateId\": 1,\n\t\"jobFamilyId\": 1,\n\t\"code\": \"MANAGER\",\n\t\"description\": \"Its responsibility includes blahblahblah\",\n\t\"ordinal\": 3,\n\t\"jobGrade\": [\n\t\t{\n\t\t\t\"id\": 1\n\t\t},\n\t\t{\n\t\t\t\"id\": 2\n\t\t}\n\t]\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Mon, 02 Oct 2017 06:31:04 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "586",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data saved\",\"data\":{\"id\":4}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "save",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "companyId": 17751
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "example": {
+        "status": 200,
+        "message": "All data retrieved",
+        "data": [
+          {
+            "id": 2,
+            "effBegin": "2017-10-01",
+            "effEnd": "2018-10-01",
+            "code": "MANAGER",
+            "description": "Its responsibility includes blahblahblah",
+            "ordinal": 3,
+            "payRateId": 1,
+            "payRateName": "Pay Rate 2",
+            "jobFamilyId": 1,
+            "jobFamilyName": "Job Family 2"
+          },
+          {
+            "id": 4,
+            "effBegin": "2017-10-01",
+            "effEnd": "2018-10-01",
+            "code": "MANAGER",
+            "description": "Its responsibility includes blahblahblah",
+            "ordinal": 3,
+            "payRateId": 1,
+            "payRateName": "Pay Rate 2",
+            "jobFamilyId": 1,
+            "jobFamilyName": "Job Family 2"
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Datum": {
+      "title": "Datum",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "ordinal": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "payRateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "payRateName": {
+          "description": "",
+          "type": "string"
+        },
+        "jobFamilyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "jobFamilyName": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "code",
+        "description",
+        "ordinal",
+        "payRateId",
+        "payRateName",
+        "jobFamilyId",
+        "jobFamilyName"
+      ]
+    },
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 4
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "id"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "id": 4,
+          "effBegin": "2017-10-01",
+          "effEnd": "2018-10-01",
+          "code": "MANAGER",
+          "payRateId": 1,
+          "jobFamilyId": 1,
+          "description": "Its responsibility includes blahblahblah",
+          "ordinal": 3,
+          "grades": [
+            {
+              "id": 1,
+              "name": "Low",
+              "code": "D",
+              "ordinal": 4
+            },
+            {
+              "id": 2,
+              "name": "Standard",
+              "code": "C",
+              "ordinal": 3
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "payRateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "jobFamilyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "ordinal": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "grades": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Grade"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "code",
+        "payRateId",
+        "jobFamilyId",
+        "description",
+        "ordinal",
+        "grades"
+      ]
+    },
+    "Grade": {
+      "title": "Grade",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "ordinal": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id",
+        "name",
+        "code",
+        "ordinal"
+      ]
+    },
+    "SaveRequest": {
+      "title": "saveRequest",
+      "example": {
+        "companyId": 17751,
+        "effBegin": "2017-10-1",
+        "effEnd": "2018-10-1",
+        "payRateId": 1,
+        "jobFamilyId": 1,
+        "code": "MANAGER",
+        "description": "Its responsibility includes blahblahblah",
+        "ordinal": 3,
+        "jobGrade": [
+          {
+            "id": 1
+          },
+          {
+            "id": 2
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "payRateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "jobFamilyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "ordinal": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "jobGrade": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/JobGrade"
+          }
+        }
+      },
+      "required": [
+        "companyId",
+        "effBegin",
+        "effEnd",
+        "payRateId",
+        "jobFamilyId",
+        "code",
+        "description",
+        "ordinal",
+        "jobGrade"
+      ]
+    },
+    "JobGrade": {
+      "title": "JobGrade",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "example": {
+        "status": 200,
+        "message": "Data saved",
+        "data": {
+          "id": 4
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data10"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data10": {
+      "title": "Data10",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "id"
+      ]
+    },
+    "UpdateRequest": {
+      "title": "updateRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 4,
+        "effBegin": "2017-10-1",
+        "effEnd": "2018-10-1",
+        "payRateId": 1,
+        "jobFamilyId": 1,
+        "code": "DESIGNER",
+        "description": "Its responsibility includes blahblahblah",
+        "ordinal": 3,
+        "jobGrade": [
+          {
+            "id": 1
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "payRateId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "jobFamilyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "ordinal": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "jobGrade": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/JobGrade"
+          }
+        }
+      },
+      "required": [
+        "companyId",
+        "id",
+        "effBegin",
+        "effEnd",
+        "payRateId",
+        "jobFamilyId",
+        "code",
+        "description",
+        "ordinal",
+        "jobGrade"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 4
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "id"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    }
+  }
+}

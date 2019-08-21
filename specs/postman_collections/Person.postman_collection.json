@@ -1,0 +1,906 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Person",
+		"_postman_id": "1cb6d99c-f67f-ea21-76fc-24ac4c5a3314",
+		"description": "Enable user to perform CRUD operations on person.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getOne",
+			"request": {
+				"url": "http://localhost:8000/core/person/getOne",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\": 1\n}"
+				},
+				"description": "Retrieve information on one company that the user has access to."
+			},
+			"response": [
+				{
+					"id": "bca857d5-53c8-435f-a67d-c595bab67d47",
+					"name": "getOne",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/person/getOne",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "Origin",
+								"value": "drife.mydocker.com",
+								"description": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\": 1\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 06 Oct 2017 04:19:51 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "1",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "99",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 133,
+					"body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":1,\"firstName\":\"Monica\",\"lastName\":\"Jessica\",\"email\":\"monicajessica@gmail.com\",\"phone\":\"\",\"mobile\":\"+6281123123132\",\"supervisorId\":null,\"supervisorFirstName\":null,\"supervisorLastName\":null,\"employeeTypeName\":null,\"workingMonth\":null,\"positionId\":null,\"positionCode\":null,\"unitId\":null,\"unitName\":null,\"locationId\":null,\"locationName\":null,\"filePhoto\":\"file\\/image\\/OWU2NzdlNzAtYTk4OC0xMWU3LTg1YzAtMDViMjRjNWVkOGM2KnRvbS5qcGc=\"}}"
+				}
+			]
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"url": "http://localhost:8000/core/person/getAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxQG1haWwuY29tIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3MzQ0OTYwLCJuYmYiOjE1MDcyNTg1NjAsImlhdCI6MTUwNzI1ODU2MCwianRpIjoidXNlcjFAbWFpbC5jb21fMTUwNzI1ODU2MCIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.aPj0W1eWwGE2BGuURiWxjmXCtDVcou_JVl-OA6zkWAETx-2EPSrgTvMBjNCOjl9jE-yDOC2AIFagcE6kG2J3JB6XuQge3UVfcIh0He3CKvi69hp2LviCwBZApRqQfFku1ElNKwXe-Vugi7_WPLbmbv9xTaq_MWvHNY26e1kr5Sd_TSnwiSO6rmUnSpWK9ub7Hxe_uE7mnoNt44y9x34pD-dbLUz-kuFZAwY1vatrAmfh0htOlK7LcArNk-1QHBSjYhavejAOJTd0WewPghRkbFKXU3O14mJOwBEEwZnW0sPKzQpsnNfakEq03n1ZcNLE2m6_c9fXgFc_31jbk0k0qw",
+						"description": ""
+					},
+					{
+						"key": "Origin",
+						"value": "drife.mydocker.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n}"
+				},
+				"description": "Retrieve information on one company that the user has access to."
+			},
+			"response": [
+				{
+					"id": "69204377-4d51-4181-9206-3b02a6c456fd",
+					"name": "getAll",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/person/getAll",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Oct 2017 04:53:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "60",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 80,
+					"body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":1,\"firstName\":\"Monica\",\"lastName\":\"Jessica\",\"email\":\"monicajessica@gmail.com\",\"phone\":\"\",\"mobile\":\"+6281123123132\"},{\"id\":2,\"firstName\":\"Monica\",\"lastName\":\"Jessica\",\"email\":\"monicajessica@gmail.com\",\"phone\":null,\"mobile\":\"+6281123123132\"}]}"
+				}
+			]
+		},
+		{
+			"name": "save",
+			"request": {
+				"url": "http://localhost:8000/core/person/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"idCard\": \"1231231231\",\n\t\"firstName\": \"Monica\",\n\t\"lastName\": \"Jessica\",\n\t\"birthPlace\": \"Jakarta, Indonesia\",\n\t\"birthDate\": \"1990-9-9\",\n\t\"dieDate\": \"9999-9-9\",\n\t\"email\": \"monicajessica@gmail.com\",\n\t\"phone\": null,\n\t\"mobile\": \"+6281123123132\",\n\t\"socialMedia\": \"@monicajess\",\n\t\"hobbies\": null,\n\t\"strength\": null,\n\t\"weakness\": null,\n\t\"countryId\": 1,\n\t\"lovPtyp\": \"EMP\",\n\t\"lovBlod\": \"O\",\n\t\"lovGndr\": \"F\",\n\t\"lovRlgn\": \"MOSLEM\",\n\t\"lovMars\": \"SINGLE\"\n}",
+							"description": "Company information as JSON string",
+							"type": "text"
+						},
+						{
+							"key": "docTypes[0]",
+							"value": "PP",
+							"description": "List of document (file) types",
+							"type": "text"
+						},
+						{
+							"key": "fileContents[0]",
+							"value": "",
+							"description": "List of file contents",
+							"type": "file"
+						},
+						{
+							"key": "upload",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Save company information."
+			},
+			"response": [
+				{
+					"id": "71a19b63-fe2a-473c-bee1-3334e1abac78",
+					"name": "save",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/person/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"idCard\": \"1231231231\",\n\t\"firstName\": \"Monica\",\n\t\"lastName\": \"Jessica\",\n\t\"birthPlace\": \"Jakarta, Indonesia\",\n\t\"birthDate\": \"1990-9-9\",\n\t\"dieDate\": \"9999-9-9\",\n\t\"email\": \"monicajessica@gmail.com\",\n\t\"phone\": null,\n\t\"mobile\": \"+6281123123132\",\n\t\"socialMedia\": \"@monicajess\",\n\t\"hobbies\": null,\n\t\"strength\": null,\n\t\"weakness\": null,\n\t\"countryId\": 1,\n\t\"lovPtyp\": \"EMP\",\n\t\"lovBlod\": \"O\",\n\t\"lovGndr\": \"F\",\n\t\"lovRlgn\": \"MOSLEM\",\n\t\"lovMars\": \"SINGLE\"\n}",
+									"description": "Company information as JSON string",
+									"type": "text"
+								},
+								{
+									"key": "docTypes[0]",
+									"value": "PP",
+									"description": "List of document (file) types",
+									"type": "text"
+								},
+								{
+									"key": "fileContents[0]",
+									"description": "List of file contents",
+									"type": "file",
+									"src": {
+										"0": {}
+									}
+								},
+								{
+									"key": "upload",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Oct 2017 05:34:38 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "586",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 596,
+					"body": "{\"status\":200,\"message\":\"Data saved\",\"data\":{\"uploaded\":true,\"id\":4}}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://localhost:8000/core/person/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n       \"id\": 2,\n\t\"idCard\": \"1231231231\",\n\t\"firstName\": \"Medica\",\n\t\"lastName\": \"Jessica\",\n\t\"birthPlace\": \"Jakarta, Indonesia\",\n\t\"birthDate\": \"1990-9-9\",\n\t\"dieDate\": \"9999-9-9\",\n\t\"email\": \"monicajessica@gmail.com\",\n\t\"phone\": null,\n\t\"mobile\": \"+6281123123132\",\n\t\"socialMedia\": \"@monicajess\",\n\t\"hobbies\": null,\n\t\"strength\": null,\n\t\"weakness\": null,\n\t\"countryId\": 1,\n\t\"lovPtyp\": \"EMP\",\n\t\"lovBlod\": \"O\",\n\t\"lovGndr\": \"F\",\n\t\"lovRlgn\": \"MOSLEM\",\n\t\"lovMars\": \"SINGLE\"\n}",
+							"description": "Person information as JSON string",
+							"type": "text"
+						},
+						{
+							"key": "docTypes[0]",
+							"value": "PP",
+							"description": "List of document (file) types",
+							"type": "text"
+						},
+						{
+							"key": "fileContents[0]",
+							"description": "List of file contents",
+							"type": "file",
+							"src": "tom.jpg"
+						},
+						{
+							"key": "upload",
+							"value": "1",
+							"description": "",
+							"type": "text"
+						}
+					]
+				},
+				"description": "Update a company's existing information."
+			},
+			"response": [
+				{
+					"id": "b1e534d4-62a3-4b9b-8e2a-a2dba398a5c5",
+					"name": "update",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/person/update",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n       \"id\": 2,\n\t\"idCard\": \"1231231231\",\n\t\"firstName\": \"Medica\",\n\t\"lastName\": \"Jessica\",\n\t\"birthPlace\": \"Jakarta, Indonesia\",\n\t\"birthDate\": \"1990-9-9\",\n\t\"dieDate\": \"9999-9-9\",\n\t\"email\": \"monicajessica@gmail.com\",\n\t\"phone\": null,\n\t\"mobile\": \"+6281123123132\",\n\t\"socialMedia\": \"@monicajess\",\n\t\"hobbies\": null,\n\t\"strength\": null,\n\t\"weakness\": null,\n\t\"countryId\": 1,\n\t\"lovPtyp\": \"EMP\",\n\t\"lovBlod\": \"O\",\n\t\"lovGndr\": \"F\",\n\t\"lovRlgn\": \"MOSLEM\",\n\t\"lovMars\": \"SINGLE\"\n}",
+									"description": "Person information as JSON string",
+									"type": "text"
+								},
+								{
+									"key": "docTypes[0]",
+									"value": "PP",
+									"description": "List of document (file) types",
+									"type": "text"
+								},
+								{
+									"key": "fileContents[0]",
+									"description": "List of file contents",
+									"type": "file",
+									"src": {
+										"0": {}
+									}
+								},
+								{
+									"key": "upload",
+									"value": "1",
+									"description": "",
+									"type": "text"
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Oct 2017 05:35:13 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "149",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 156,
+					"body": "{\"status\":200,\"message\":\"Data updated\",\"data\":{\"uploaded\":true}}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://localhost:8000/core/company/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\" : 4\n}"
+				},
+				"description": "Delete a company's information."
+			},
+			"response": [
+				{
+					"id": "c1e14718-6bbf-4150-a392-26603458a5c8",
+					"name": "delete",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/company/delete",
+						"method": "POST",
+						"header": [
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\" : 4\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Thu, 05 Oct 2017 05:37:09 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "1",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "72",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 104,
+					"body": "{\"status\":200,\"message\":\"Data deleted\",\"data\":null}"
+				}
+			]
+		}
+	]
+}

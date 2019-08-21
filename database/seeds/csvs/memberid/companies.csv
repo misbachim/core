@@ -1,0 +1,2 @@
+tenant_id,id,eff_begin,eff_end,name,description,company_tax_number,is_deleted,created_by,created_at,updated_by,updated_at,location_code,tax_withholder_number,tax_withholder_name
+1082115978,1082115978,2018-01-01,9999-12-31,PT Global Loyal Sejahtera,PT Global Loyal Sejahtera,0,f,0,2018-11-09,,,HQ,123,Indri Wijasari

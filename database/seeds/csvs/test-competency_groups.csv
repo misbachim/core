@@ -1,0 +1,4 @@
+tenant_id,company_id,id,code,name,description,eff_begin,eff_end,created_at,created_by,updated_at,updated_by
+1000000000,1700000000,51,CGA,Competency Group A,,2018-09-21,2018-09-26,2018-09-21 07:44:03+00,1,2018-09-26 07:57:02+00,1
+1000000000,1700000000,52,CGB,Competency Group B,,2018-09-21,9999-12-31,2018-09-21 07:44:24+00,1,,
+1000000000,1700000000,53,CGA,Competency Group A,asd,2018-09-26,9999-12-31,2018-09-26 07:57:02+00,1,,

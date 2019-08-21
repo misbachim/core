@@ -1,0 +1,20 @@
+{
+    "id": 10900,
+    "code": "DRF",
+    "name": "DRIFE",
+    "description": "VISI MISI DRIFE ADALAH BLABLABLA",
+    "companyTaxNumber": "3321259005",
+    "lovCur": "IDR",
+    "lovLang": "ID",
+    "locationId": 3,
+    "effBegin": "2017-01-01",
+    "effEnd": "2099-12-31",
+    "bankAccounts": [
+        {
+            "$ref": "bank-account.json#/0"
+        },
+        {
+            "$ref": "bank-account.json#/1"
+        }
+    ]
+}

@@ -1,0 +1,7 @@
+code,name,type,created_by,created_at,updated_by,updated_at
+DATE,Date Format,A,0,2018-01-01,,
+LANG,Language,A,0,2018-01-01,,
+NSEP,Number Separator,A,0,2018-01-01,,
+ADAL,Advanced Annual Leave,C,0,2018-01-01,,
+VALD,Validation,C,0,2018-01-01,,
+WFES,Workflow Escalation,C,0,2018-01-01,,

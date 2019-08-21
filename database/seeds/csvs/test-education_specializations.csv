@@ -1,0 +1,6 @@
+tenant_id,company_id,id,code,name,description,lov_category_education,eff_begin,eff_end,created_at,created_by,updated_at,updated_by
+1000000000,1700000000,2,COMSCI,Computer Science,Computer Science Description,IT,2018-09-12,9999-12-31,2018-09-12 06:50:53+00,1,,
+1000000000,1700000000,3,PHAR,Pharmacy,Pharmacy,MD,2018-09-12,2018-09-12,2018-09-12 06:52:03+00,1,2018-09-12 07:05:06+00,1
+1000000000,1700000000,4,PHAR,Pharmacy,Pharmacy,MD,2018-09-12,2018-09-12,2018-09-12 07:05:06+00,1,,
+1000000000,1700000000,5,CS01,Computer Science,okeee,IT,2018-09-12,2018-09-13,2018-09-12 07:09:26+00,1,2018-09-13 07:13:28+00,1
+1000000000,1700000000,6,CS01,Management Kelautan,okeee,MG,2018-09-13,9999-12-31,2018-09-13 07:13:28+00,1,,

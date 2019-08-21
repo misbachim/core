@@ -1,0 +1,14 @@
+{
+    "0": {
+        "companyId": 10900,
+        "id": 2,
+        "accNumber": "345",
+        "accName": "Bank CD"
+    },
+    "1": {
+        "companyId": 10900,
+        "id": 2,
+        "accNumber": "123",
+        "accName": "Bank AB"
+    }
+}

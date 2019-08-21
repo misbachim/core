@@ -1,0 +1,945 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Assignment",
+    "description": "Enable user to perform CRUD operations on assignment.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/assignment",
+  "securityDefinitions": {
+    "auth": {
+      "type": "oauth2",
+      "flow": "implicit",
+      "authorizationUrl": "http://localhost:8000/core/assignment",
+      "scopes": {}
+    }
+  },
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "upload",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "docTypes[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "fileContents[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data saved",
+                "data": {
+                  "uploaded": true,
+                  "id": 1
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "consumes": [
+          "application/x-www-form-urlencoded"
+        ],
+        "parameters": [
+          {
+            "name": "data",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "upload",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "docTypes[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "fileContents[0]",
+            "in": "formData",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Authorization",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Origin",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data updated",
+                "data": {
+                  "uploaded": true
+                }
+              }
+            }
+          }
+        },
+        "security": [
+          {
+            "auth": []
+          }
+        ],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "companyId": 1900000000,
+        "personId": 1,
+        "id": 1
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "personId",
+        "id"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "firstName": {
+          "description": "",
+          "type": "string"
+        },
+        "lastName": {
+          "description": "",
+          "type": "string"
+        },
+        "email": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "isPrimary": {
+          "description": "",
+          "type": "boolean"
+        },
+        "employeeId": {
+          "description": "",
+          "type": "string"
+        },
+        "employeeTypeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "employeeTypeName": {
+          "description": "",
+          "type": "string"
+        },
+        "unitId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "unitName": {
+          "description": "",
+          "type": "string"
+        },
+        "jobId": {
+          "description": "",
+          "type": "string"
+        },
+        "jobCode": {
+          "description": "",
+          "type": "string"
+        },
+        "positionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "positionCode": {
+          "description": "",
+          "type": "string"
+        },
+        "costCenterCode": {
+          "description": "",
+          "type": "string"
+        },
+        "costCenterName": {
+          "description": "",
+          "type": "string"
+        },
+        "gradeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "gradeName": {
+          "description": "",
+          "type": "string"
+        },
+        "locationId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "locationName": {
+          "description": "",
+          "type": "string"
+        },
+        "lovAsta": {
+          "description": "",
+          "type": "string"
+        },
+        "supervisorId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "supervisorFirstName": {
+          "description": "",
+          "type": "string"
+        },
+        "supervisorLastName": {
+          "description": "",
+          "type": "string"
+        },
+        "fileAssignDoc": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "personId",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "isPrimary",
+        "employeeId",
+        "employeeTypeCode",
+        "employeeTypeName",
+        "unitId",
+        "unitName",
+        "jobId",
+        "jobCode",
+        "positionId",
+        "positionCode",
+        "costCenterCode",
+        "costCenterName",
+        "gradeCode",
+        "gradeName",
+        "locationId",
+        "locationName",
+        "lovAsta",
+        "supervisorId",
+        "supervisorFirstName",
+        "supervisorLastName",
+        "fileAssignDoc"
+      ]
+    },
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "companyId": 1900000000,
+        "personId": 1
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "personId"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Data5"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data5": {
+      "title": "Data5",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "personId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "firstName": {
+          "description": "",
+          "type": "string"
+        },
+        "lastName": {
+          "description": "",
+          "type": "string"
+        },
+        "email": {
+          "description": "",
+          "type": "string"
+        },
+        "phone": {
+          "description": "",
+          "type": "string"
+        },
+        "mobile": {
+          "description": "",
+          "type": "string"
+        },
+        "isPrimary": {
+          "description": "",
+          "type": "boolean"
+        },
+        "employeeId": {
+          "description": "",
+          "type": "string"
+        },
+        "employeeTypeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "employeeTypeName": {
+          "description": "",
+          "type": "string"
+        },
+        "unitId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "unitName": {
+          "description": "",
+          "type": "string"
+        },
+        "jobId": {
+          "description": "",
+          "type": "string"
+        },
+        "jobCode": {
+          "description": "",
+          "type": "string"
+        },
+        "positionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "positionCode": {
+          "description": "",
+          "type": "string"
+        },
+        "costCenterCode": {
+          "description": "",
+          "type": "string"
+        },
+        "costCenterName": {
+          "description": "",
+          "type": "string"
+        },
+        "gradeCode": {
+          "description": "",
+          "type": "string"
+        },
+        "gradeName": {
+          "description": "",
+          "type": "string"
+        },
+        "locationId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "locationName": {
+          "description": "",
+          "type": "string"
+        },
+        "supervisorId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "supervisorFirstName": {
+          "description": "",
+          "type": "string"
+        },
+        "supervisorLastName": {
+          "description": "",
+          "type": "string"
+        },
+        "lovAsta": {
+          "description": "",
+          "type": "string"
+        },
+        "fileAssignDoc": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "id",
+        "personId",
+        "firstName",
+        "lastName",
+        "email",
+        "phone",
+        "mobile",
+        "isPrimary",
+        "employeeId",
+        "employeeTypeCode",
+        "employeeTypeName",
+        "unitId",
+        "unitName",
+        "jobId",
+        "jobCode",
+        "positionId",
+        "positionCode",
+        "costCenterCode",
+        "costCenterName",
+        "gradeCode",
+        "gradeName",
+        "locationId",
+        "locationName",
+        "supervisorId",
+        "supervisorFirstName",
+        "supervisorLastName",
+        "lovAsta",
+        "fileAssignDoc"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "example": {
+        "status": 200,
+        "message": "Data saved",
+        "data": {
+          "uploaded": true,
+          "id": 1
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data7"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data7": {
+      "title": "Data7",
+      "type": "object",
+      "properties": {
+        "uploaded": {
+          "description": "",
+          "type": "boolean"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "uploaded",
+        "id"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "example": {
+        "status": 200,
+        "message": "Data updated",
+        "data": {
+          "uploaded": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data9"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data9": {
+      "title": "Data9",
+      "type": "object",
+      "properties": {
+        "uploaded": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "uploaded"
+      ]
+    }
+  }
+}

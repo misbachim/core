@@ -1,0 +1,913 @@
+{
+	"info": {
+		"name": "Company",
+		"_postman_id": "166cbb29-2f5d-3a55-ae9d-0320389d64a4",
+		"description": "Enable user to perform CRUD operations on company.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getOne",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "drife.hrapp.com"
+					},
+					{
+						"key": "Authorization",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\" : 17751\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/core/company/getOne",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"core",
+						"company",
+						"getOne"
+					]
+				},
+				"description": "Retrieve information on one company that the user has access to."
+			},
+			"response": [
+				{
+					"id": "ad90ebbc-584b-40d5-96e4-775793c04c86",
+					"name": "getOne",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Origin",
+								"value": "drife.hrapp.com",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\" : 17751\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/core/company/getOne",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"company",
+								"getOne"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Nov 2017 07:46:37 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "44",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "232",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.10",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 308,
+					"body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":17751,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"code\":\"DRF\",\"name\":\"DRIFE\",\"description\":\"VISI MISI DRIFE ADALAH BLABLABLA\",\"fileLogo\":\"file\\/image\\/ODE1NTY2NTAtYTM1My0xMWU3LTgzMTMtYmJiYWY0NTQxMTkxKnRvbS5qcGc=\",\"companyTaxNumber\":\"3321259005\",\"locationId\":1,\"lovCur\":\"IDR\",\"bankAccount\":[{\"companyId\":17751,\"bankId\":1,\"accNumber\":\"123121312311\",\"accName\":\"DRIFE\"},{\"companyId\":17751,\"bankId\":2,\"accNumber\":\"897897979879\",\"accName\":\"DRIFE AUTOMATIC\"}]}}"
+				}
+			]
+		},
+		{
+			"name": "getMany",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "drife.hrapp.com"
+					},
+					{
+						"key": "Authorization",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"companyIds\" :\n    [\n    \t17455,\n    \t10777\n    ]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/core/company/getMany",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"core",
+						"company",
+						"getMany"
+					]
+				},
+				"description": "Retrieve information on one company that the user has access to."
+			},
+			"response": [
+				{
+					"id": "34acd1af-9229-49d0-901f-8b1e10d047a4",
+					"name": "getMany",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json"
+							},
+							{
+								"key": "Origin",
+								"value": "drife.hrapp.com"
+							},
+							{
+								"key": "Authorization",
+								"value": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyIds\" :\n    [\n    \t17455,\n    \t10777\n    ]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/core/company/getMany",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"company",
+								"getMany"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Nov 2017 08:12:05 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "68",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.10",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 91,
+					"body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":10777,\"name\":\"DRIFE\",\"code\":\"DRF\"},{\"id\":17455,\"name\":\"DRIFE\",\"code\":\"DRF\"}]}"
+				}
+			]
+		},
+		{
+			"name": "save",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded"
+					},
+					{
+						"key": "Authorization",
+						"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3ODQ3NDk1LCJuYmYiOjE1MDc3NjEwOTUsImlhdCI6MTUwNzc2MTA5NiwianRpIjoidXNlcjFfMTUwNzc2MTA5NiIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.XtnrKm7ZjF5kb4ckH__CEzuAwJti6qHMRgkPK8kXDRbHkbcBnF2FBc1cPT2p9WtHvNLcLgpKdxmq3Orri_-JH1GtkHTg2wMG4-E7sxCil_hqWwySQ17qZJNJsVxwlFx2mHorgHhMj19Ud8q7z91ElRmWVj_L7pWN9AbU4rAMKNm1QUA66NjmuX0MlkvfZkLfJkUuytNWG3A_9N0qdbuWg-Qc4psUiAAMAbw11k1CPrUiSgaAMVzoihKp2PfUDfTJpy5_vYq-B--UG_AW_OF3NnM7zQbNKfaK7NprqATGdeVXFwj5Lem8F4XXERCDqopotIaFiw65_xOHP0DmNWDIPQ"
+					},
+					{
+						"key": "Origin",
+						"value": "drife.hrapp.com"
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\n  \"code\": \"DRF\",\n  \"name\": \"DRIFE\",\n  \"description\": \"VISI MISI DRIFE ADALAH BLABLABLA\",\n  \"companyTaxNumber\": \"3321259005\",\n  \"lovCur\": \"IDR\",\n  \"lovLang\": \"ID\",\n  \"locationId\": 1,\n  \"effBegin\": \"2017-01-01\",\n  \"effEnd\": \"2099-12-31\",\n  \"bankAccounts\": [\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"345\",\n      \"accName\": \"Bank CD\"\n    },\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"123\",\n      \"accName\": \"Bank AB\"\n    }\n  ]\n}",
+							"description": "Company information as JSON string",
+							"type": "text"
+						},
+						{
+							"key": "docTypes[0]",
+							"value": "PP",
+							"description": "List of document (file) types",
+							"type": "text"
+						},
+						{
+							"key": "fileContents[0]",
+							"description": "List of file contents",
+							"type": "file",
+							"src": "16033_Image.jpg"
+						},
+						{
+							"key": "upload",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/core/company/save",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"core",
+						"company",
+						"save"
+					]
+				},
+				"description": "Save company information."
+			},
+			"response": [
+				{
+					"id": "8efae801-ef9b-4d4a-aed3-5629445ed141",
+					"name": "save",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/x-www-form-urlencoded"
+							},
+							{
+								"key": "Authorization",
+								"value": "Bearer eyJhbGciOiJSUzI1NiJ9.eyJpc3MiOiJteWRvY2tlciIsInN1YiI6InVzZXIxIiwiYXVkIjoiZHJpZmUubXlkb2NrZXIuY29tIiwiZXhwIjoxNTA3ODQ3NDk1LCJuYmYiOjE1MDc3NjEwOTUsImlhdCI6MTUwNzc2MTA5NiwianRpIjoidXNlcjFfMTUwNzc2MTA5NiIsInRlbmFudElkIjoxMDAwMDAwMDAwLCJ1c2VySWQiOjEsImVtYWlsIjoidXNlcjFAbWFpbC5jb20ifQ.XtnrKm7ZjF5kb4ckH__CEzuAwJti6qHMRgkPK8kXDRbHkbcBnF2FBc1cPT2p9WtHvNLcLgpKdxmq3Orri_-JH1GtkHTg2wMG4-E7sxCil_hqWwySQ17qZJNJsVxwlFx2mHorgHhMj19Ud8q7z91ElRmWVj_L7pWN9AbU4rAMKNm1QUA66NjmuX0MlkvfZkLfJkUuytNWG3A_9N0qdbuWg-Qc4psUiAAMAbw11k1CPrUiSgaAMVzoihKp2PfUDfTJpy5_vYq-B--UG_AW_OF3NnM7zQbNKfaK7NprqATGdeVXFwj5Lem8F4XXERCDqopotIaFiw65_xOHP0DmNWDIPQ"
+							},
+							{
+								"key": "Origin",
+								"value": "drife.hrapp.com"
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\n  \"code\": \"DRF\",\n  \"name\": \"DRIFE\",\n  \"description\": \"VISI MISI DRIFE ADALAH BLABLABLA\",\n  \"companyTaxNumber\": \"3321259005\",\n  \"lovCur\": \"IDR\",\n  \"lovLang\": \"ID\",\n  \"locationId\": 1,\n  \"effBegin\": \"2017-01-01\",\n  \"effEnd\": \"2099-12-31\",\n  \"bankAccounts\": [\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"345\",\n      \"accName\": \"Bank CD\"\n    },\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"123\",\n      \"accName\": \"Bank AB\"\n    }\n  ]\n}",
+									"description": "Company information as JSON string",
+									"type": "text"
+								},
+								{
+									"key": "docTypes[0]",
+									"value": "PP",
+									"description": "List of document (file) types",
+									"type": "text"
+								},
+								{
+									"key": "fileContents[0]",
+									"description": "List of file contents",
+									"type": "file",
+									"src": {
+										"0": {}
+									}
+								},
+								{
+									"key": "upload",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/core/company/save",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"company",
+								"save"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Nov 2017 07:54:13 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "1",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "8039",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.10",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 8298,
+					"body": "{\"status\":200,\"message\":\"Data saved\",\"data\":{\"uploaded\":true,\"id\":1488146781}}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Origin",
+						"value": "drife.hrapp.com"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Authorization",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "data",
+							"value": "{\n  \"id\": 27005,\n  \"code\": \"DRF\",\n  \"name\": \"DRIVE\",\n  \"description\": \"VISI MISI DRIFE ADALAH BLABLABLA\",\n  \"companyTaxNumber\": \"3321259005\",\n  \"lovCur\": \"IDR\",\n  \"lovLang\": \"ID\",\n  \"locationId\": 1,\n  \"effBegin\": \"2017-01-01\",\n  \"effEnd\": \"2099-12-31\",\n  \"bankAccounts\": [\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"345\",\n      \"accName\": \"Bank CD\"\n    },\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"123\",\n      \"accName\": \"Bank AB\"\n    }\n  ]\n}",
+							"description": "Company information as JSON string",
+							"type": "text"
+						},
+						{
+							"key": "docTypes[0]",
+							"value": "PP",
+							"description": "List of document (file) types",
+							"type": "text"
+						},
+						{
+							"key": "fileContents[0]",
+							"value": "",
+							"description": "List of file contents",
+							"type": "file"
+						},
+						{
+							"key": "upload",
+							"value": "1",
+							"type": "text"
+						}
+					]
+				},
+				"url": {
+					"raw": "http://localhost:8000/core/company/update",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"core",
+						"company",
+						"update"
+					]
+				},
+				"description": "Update a company's existing information."
+			},
+			"response": [
+				{
+					"id": "e7fd05df-7189-4c8e-ad70-60b4351d7ed2",
+					"name": "update",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Origin",
+								"value": "drife.hrapp.com",
+								"disabled": false
+							},
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "formdata",
+							"formdata": [
+								{
+									"key": "data",
+									"value": "{\n  \"id\": 27005,\n  \"code\": \"DRF\",\n  \"name\": \"DRIVE\",\n  \"description\": \"VISI MISI DRIFE ADALAH BLABLABLA\",\n  \"companyTaxNumber\": \"3321259005\",\n  \"lovCur\": \"IDR\",\n  \"lovLang\": \"ID\",\n  \"locationId\": 1,\n  \"effBegin\": \"2017-01-01\",\n  \"effEnd\": \"2099-12-31\",\n  \"bankAccounts\": [\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"345\",\n      \"accName\": \"Bank CD\"\n    },\n    {\n      \"companyId\": 10900,\n      \"bankId\": 2,\n      \"accNumber\": \"123\",\n      \"accName\": \"Bank AB\"\n    }\n  ]\n}",
+									"description": "Company information as JSON string",
+									"type": "text"
+								},
+								{
+									"key": "docTypes[0]",
+									"value": "PP",
+									"description": "List of document (file) types",
+									"type": "text"
+								},
+								{
+									"key": "fileContents[0]",
+									"description": "List of file contents",
+									"type": "file",
+									"src": {
+										"0": {}
+									}
+								},
+								{
+									"key": "upload",
+									"value": "1",
+									"type": "text"
+								}
+							]
+						},
+						"url": {
+							"raw": "http://localhost:8000/core/company/update",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"company",
+								"update"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Nov 2017 07:55:05 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "2176",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.10",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 2193,
+					"body": "{\"status\":200,\"message\":\"Data updated\",\"data\":{\"uploaded\":true}}"
+				}
+			]
+		},
+		{
+			"name": "getSettings",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					},
+					{
+						"key": "Origin",
+						"value": "drife.hrapp.com"
+					},
+					{
+						"key": "Authorization",
+						"value": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyIds\": [1900000000, 1700000000, 16092]\n}"
+				},
+				"url": {
+					"raw": "http://localhost:8000/core/company/getSettings",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8000",
+					"path": [
+						"core",
+						"company",
+						"getSettings"
+					]
+				}
+			},
+			"response": [
+				{
+					"id": "8b1437b5-e8a6-4c2d-bc25-c2d6e7c77ccd",
+					"name": "getSettings",
+					"originalRequest": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"disabled": false
+							},
+							{
+								"key": "Origin",
+								"value": "drife.hrapp.com",
+								"disabled": false
+							},
+							{
+								"key": "Authorization",
+								"value": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyIds\": [1900000000, 1700000000, 16092]\n}"
+						},
+						"url": {
+							"raw": "http://localhost:8000/core/company/getSettings",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "8000",
+							"path": [
+								"core",
+								"company",
+								"getSettings"
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*",
+							"name": "Access-Control-Allow-Origin",
+							"description": "Specifies a URI that may access the resource. For requests without credentials, the server may specify '*' as a wildcard, thereby allowing any origin to access the resource."
+						},
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 08 Nov 2017 07:47:47 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "220",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.10",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 249,
+					"body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"companyId\":1700000000,\"companyName\":\"LAWENCON\",\"companyCode\":\"LWC\",\"setting\":{\"LANG\":\"JP\",\"CURR\":\"IDR\"}},{\"companyId\":1900000000,\"companyName\":\"DRIFE\",\"companyCode\":\"DRF\",\"setting\":{\"LANG\":\"EN\",\"CURR\":\"USD\"}}]}"
+				}
+			]
+		}
+	]
+}

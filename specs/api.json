@@ -1,0 +1,26 @@
+{
+    "swagger": "2.0",
+    "info": {
+        "title": "Core Service",
+        "version": "1.0.0"
+    },
+    "basePath": "/core/v1",
+    "tags": [
+        { "name": "company" },
+        { "name": "location" }
+    ],
+    "paths": {
+        "/company/getOne": { "$ref": "company/getOne.json" },
+        "/company/save": { "$ref": "company/save.json" },
+        "/company/update": { "$ref": "company/update.json" },
+        "/company/delete": { "$ref": "company/delete.json" },
+        "/company/getSettings": { "$ref": "company/getSettings.json" },
+
+        "/location/getAll": { "$ref": "location/getAll.json" },
+        "/location/getOne": { "$ref": "location/getOne.json" },
+        "/location/save": { "$ref": "location/save.json" },
+        "/location/update": { "$ref": "location/update.json" },
+        "/location/delete": { "$ref": "location/delete.json" }
+    },
+    "definitions": {}
+}

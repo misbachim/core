@@ -1,0 +1,26 @@
+{
+    "type": "object",
+    "properties": {
+        "id": { "type": "integer" },
+        "code": { "type": "string" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "companyTaxNumber": { "type": "string" },
+        "lovCur": { "type": "string" },
+        "lovLang": { "type": "string" },
+        "locationId": { "type": "integer" },
+        "effBegin": { "type": "date" },
+        "effEnd": { "type": "date" },
+        "bankAccounts": {
+            "type": "array",
+            "items": {
+                "schema": {
+                    "$ref": "bank-account.json"
+                }
+            }
+        }
+    },
+    "example": {
+        "$ref": "../examples/company.json"
+    }
+}

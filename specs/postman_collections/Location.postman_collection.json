@@ -1,0 +1,748 @@
+{
+	"variables": [],
+	"info": {
+		"name": "Location",
+		"_postman_id": "31031acf-35be-1842-3330-a063f6692730",
+		"description": "Enable user to perform CRUD operations on location.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "getOne",
+			"request": {
+				"url": "http://localhost:8000/core/location/getOne",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n  \"id\" : 1,\n  \"companyId\": 17751\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "fcc6e70f-26c5-406b-ae07-71bb854ec4d5",
+					"name": "getOne",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/location/getOne",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n  \"id\" : 1,\n  \"companyId\": 17751\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Mon, 02 Oct 2017 09:04:05 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "75",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 107,
+					"body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":1,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"description\":\"Kantor Pusat Jakarta\",\"name\":\"Kantor Pusat\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"cityId\":2,\"districtId\":2,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\",\"district\":null,\"city\":\"Jakarta\",\"province\":null,\"provinceId\":null,\"country\":null,\"countryId\":null}}"
+				}
+			]
+		},
+		{
+			"name": "save",
+			"request": {
+				"url": "http://localhost:8000/core/location/save",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"companyId\": 17751,\n    \"effBegin\": \"2017-01-01\",\n    \"effEnd\": \"2099-12-31\",\n    \"name\": \"Kantor Pusat\",\n    \"description\": \"Kantor Pusat Jakarta\",\n    \"taxOfficeCode\": \"TAX\",\n    \"calendarId\": 1,\n    \"cityId\": 2,\n    \"districtId\": 2,\n    \"address\": \"ini alamatnya\",\n    \"postalCode\": \"12312321\",\n    \"phone\": \"31234 314123124 213\",\n    \"fax\": \"1234 4567 8907\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "82d6b19a-19ed-4bfb-8f4b-8eb340fddcb7",
+					"name": "save",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/location/save",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": 17751,\n    \"effBegin\": \"2017-01-01\",\n    \"effEnd\": \"2099-12-31\",\n    \"name\": \"Kantor Pusat\",\n    \"description\": \"Kantor Pusat Jakarta\",\n    \"taxOfficeCode\": \"TAX\",\n    \"calendarId\": 1,\n    \"cityId\": 2,\n    \"districtId\": 2,\n    \"address\": \"ini alamatnya\",\n    \"postalCode\": \"12312321\",\n    \"phone\": \"31234 314123124 213\",\n    \"fax\": \"1234 4567 8907\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 08:48:54 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "93",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 98,
+					"body": "{\"status\":200,\"message\":\"Data saved\",\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "update",
+			"request": {
+				"url": "http://localhost:8000/core/location/update",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"companyId\": 17751,\n    \"id\": 7,\n    \"effBegin\": \"2017-01-01\",\n    \"effEnd\": \"2099-12-31\",\n    \"name\": \"Kantor Pusat\",\n    \"description\": \"Kantor Pusat Jakarta\",\n    \"taxOfficeCode\": \"TAX\",\n    \"calendarId\": 1,\n    \"cityId\": 2,\n    \"districtId\": 2,\n    \"address\": \"ini alamatnya bung\",\n    \"postalCode\": \"12312321\",\n    \"phone\": \"31234 314123124 213\",\n    \"fax\": \"1234 4567 8907\"\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "54656773-5c9e-4b81-85c0-9b65da9da62b",
+					"name": "update",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/location/update",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": ""
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": ""
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": ""
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": ""
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"companyId\": 17751,\n    \"id\": 7,\n    \"effBegin\": \"2017-01-01\",\n    \"effEnd\": \"2099-12-31\",\n    \"name\": \"Kantor Pusat\",\n    \"description\": \"Kantor Pusat Jakarta\",\n    \"taxOfficeCode\": \"TAX\",\n    \"calendarId\": 1,\n    \"cityId\": 2,\n    \"districtId\": 2,\n    \"address\": \"ini alamatnya bung\",\n    \"postalCode\": \"12312321\",\n    \"phone\": \"31234 314123124 213\",\n    \"fax\": \"1234 4567 8907\"\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 08:49:23 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "99",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 109,
+					"body": "{\"status\":200,\"message\":\"Data updated\",\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "delete",
+			"request": {
+				"url": "http://localhost:8000/core/location/delete",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 17751,\n\t\"id\": 10\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "27810791-bdf4-4d4a-a0ad-6fb7b433bd1a",
+					"name": "delete",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/location/delete",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 17751,\n\t\"id\": 10\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 08:49:49 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "568",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 572,
+					"body": "{\"status\":200,\"message\":\"Data deleted\",\"data\":null}"
+				}
+			]
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"url": "http://localhost:8000/core/location/getAll",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					},
+					{
+						"key": "tenantId",
+						"value": "1000000000",
+						"description": ""
+					},
+					{
+						"key": "userId",
+						"value": "1",
+						"description": ""
+					},
+					{
+						"key": "email",
+						"value": "user1@mail.com",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"companyId\": 17751\n}"
+				},
+				"description": ""
+			},
+			"response": [
+				{
+					"id": "e6f012fb-ee3f-4905-b997-d0c7bba7d975",
+					"name": "getAll",
+					"originalRequest": {
+						"url": "http://localhost:8000/core/location/getAll",
+						"method": "POST",
+						"header": [
+							{
+								"key": "Content-Type",
+								"value": "application/json",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "tenantId",
+								"value": "1000000000",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "userId",
+								"value": "1",
+								"description": "",
+								"disabled": false
+							},
+							{
+								"key": "email",
+								"value": "user1@mail.com",
+								"description": "",
+								"disabled": false
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n\t\"companyId\": 17751\n}"
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"_postman_previewtype": "text",
+					"header": [
+						{
+							"key": "Cache-Control",
+							"value": "no-cache, private",
+							"name": "Cache-Control",
+							"description": "Tells all caching mechanisms from server to client whether they may cache this object. It is measured in seconds"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive",
+							"name": "Connection",
+							"description": "Options that are desired for the connection"
+						},
+						{
+							"key": "Content-Language",
+							"value": "en",
+							"name": "Content-Language",
+							"description": "The language the content is in"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json",
+							"name": "Content-Type",
+							"description": "The mime type of this content"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 29 Sep 2017 08:50:06 GMT",
+							"name": "Date",
+							"description": "The date and time that the message was sent"
+						},
+						{
+							"key": "Server",
+							"value": "nginx",
+							"name": "Server",
+							"description": "A name for the server"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked",
+							"name": "Transfer-Encoding",
+							"description": "The form of encoding used to safely transfer the entity to the user. Currently defined methods are: chunked, compress, deflate, gzip, identity."
+						},
+						{
+							"key": "Via",
+							"value": "kong/0.11.0",
+							"name": "Via",
+							"description": "Informs the client of proxies through which the response was sent."
+						},
+						{
+							"key": "X-Kong-Proxy-Latency",
+							"value": "0",
+							"name": "X-Kong-Proxy-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Kong-Upstream-Latency",
+							"value": "63",
+							"name": "X-Kong-Upstream-Latency",
+							"description": "Custom header"
+						},
+						{
+							"key": "X-Powered-By",
+							"value": "PHP/7.1.9",
+							"name": "X-Powered-By",
+							"description": "Specifies the technology (ASP.NET, PHP, JBoss, e.g.) supporting the web application (version details are often in X-Runtime, X-Version, or X-AspNet-Version)"
+						}
+					],
+					"cookie": [],
+					"responseTime": 67,
+					"body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":1,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":3,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":5,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":6,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":2,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya bung\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":8,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":9,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":11,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"},{\"id\":7,\"effBegin\":\"2017-01-01\",\"effEnd\":\"2099-12-31\",\"name\":\"Kantor Pusat\",\"description\":\"Kantor Pusat Jakarta\",\"taxOfficeCode\":\"TAX\",\"calendarId\":1,\"countryId\":null,\"country\":null,\"provinceId\":null,\"province\":null,\"cityId\":2,\"city\":\"Jakarta\",\"districtId\":2,\"district\":null,\"address\":\"ini alamatnya bung\",\"postalCode\":\"12312321\",\"phone\":\"31234 314123124 213\",\"fax\":\"1234 4567 8907\"}]}"
+				}
+			]
+		}
+	]
+}

@@ -1,0 +1,7 @@
+tenant_id,company_id,id,code,name,description,eff_begin,eff_end,created_at,created_by,updated_at,updated_by
+1000000000,1700000000,1,MDLPRG,Programmer,Competency Model for Programmer,2018-09-12,2018-09-12,2018-09-12 06:43:39+00,1,2018-09-12 06:48:26+00,1
+1000000000,1700000000,2,MDLPRG,Programmer,Competency Model for Programmer,2018-09-12,2018-09-12,2018-09-12 06:48:26+00,1,2018-09-12 06:49:10+00,1
+1000000000,1700000000,3,MDLPRG,Programmer,Competency Model for Programmer,2018-09-12,2018-09-12,2018-09-12 06:49:10+00,1,2018-09-12 09:52:44+00,1
+1000000000,1700000000,4,MDLPRG,Programmer,Competency Model for Programmer,2018-09-12,9999-12-31,2018-09-12 09:52:44+00,1,,
+1000000000,1700000000,5,R01,Rumah,Khusus buat orang sultan ya,2018-09-26,9999-12-31,2018-09-26 03:17:57+00,1,,
+1000000000,1700000000,6,CM001,Competency Model 1,Untuk korang Kayah,2018-09-26,9999-12-31,2018-09-26 06:00:00+00,1,,

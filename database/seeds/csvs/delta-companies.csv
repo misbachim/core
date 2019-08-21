@@ -1,0 +1,4 @@
+tenant_id,id,eff_begin,eff_end,name,description,company_tax_number,is_deleted,created_by,created_at,updated_by,updated_at,file_logo,location_code,tax_withholder_number,tax_withholder_name
+12345,12345,2018-01-01,9999-12-31,PT Delta Adib Distribution,PT Delta Adib Distribution,0,f,0,2018-09-26 00:00:00+00,1,2018-09-26 00:00:00+00,HQ,123,Indri Wijasari,
+1113223891,1113223891,2018-01-01,9999-12-31,PT Delta Adib Distribution,PT Delta Adib Distribution,0,f,0,2018-09-26 00:00:00+00,1,2018-09-26 00:00:00+00,HQ,HO,Indri Wijasari,
+1113223891,1000000000,2018-01-01,9999-12-31,Delta-UAT,(UAT) PT Delta Adib Distribution,0,f,0,2018-09-26 00:00:00+00,1,2018-09-26 00:00:00+00,HQ,HO,Indri Wijasari,

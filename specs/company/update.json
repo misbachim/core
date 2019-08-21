@@ -1,0 +1,30 @@
+{
+    "post": {
+        "tags": ["company"],
+        "summary": "Update company information",
+        "description": "Update information on a company that the user has access to.",
+        "operationId": "updateCompany",
+        "parameters": [
+            {
+                "name": "Company Full Information",
+                "description": "Target company's full information (exclude: $$ref)",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "schemas/company.json"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "company information updated"
+            },
+            "406": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

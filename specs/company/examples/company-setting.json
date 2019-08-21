@@ -1,0 +1,16 @@
+{
+    "0": {
+        "companyId": 17005,
+        "companyName": "LAWENCON",
+        "setting": [
+            {
+                "lovTypeCode": "CURR",
+                "lovKeyData": "USD"
+            },
+            {
+                "lovTypeCode": "LANG",
+                "lovKeyData": "EN"
+            }
+        ]
+    }
+}

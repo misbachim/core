@@ -1,0 +1,9 @@
+tenant_id,company_id,eff_begin,eff_end,code,description,ordinal,created_by,created_at,updated_by,updated_at,job_family_code,name,job_category_code,id
+1000000001,1000000001,2019-06-10,9999-12-31,CEO,Chief Executive Officer,1,0,2019-06-11,,,,CEO,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,DCEO,Deputy Chief Executive Officer,2,0,2019-06-11,,,,Deputy CEO,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,DIR,Director,3,0,2019-06-11,,,,Director,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,GM,General Manager,4,0,2019-06-11,,,,General Manager,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,SPV,Supervisor,5,0,2019-06-11,,,,Supervisor,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,STAFF,Staff,6,0,2019-06-11,,,,Staff,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,AST,Assistant,7,0,2019-06-11,,,,Assistant,,-1
+1000000001,1000000001,2019-06-10,9999-12-31,TRAINEE,Trainee,8,0,2019-06-11,,,,Trainee,,-1

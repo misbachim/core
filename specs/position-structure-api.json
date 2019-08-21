@@ -1,0 +1,1093 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Position Structure",
+    "description": "Enable user to perform CRUD operations on position structure.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/posstructure",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "All data retrieved",
+                "data": [
+                  {
+                    "id": 1,
+                    "effBegin": "2017-10-01",
+                    "effEnd": "2018-10-01",
+                    "name": "Structure 1",
+                    "description": "This is a structure",
+                    "isPrimary": true
+                  },
+                  {
+                    "id": 5,
+                    "effBegin": "2017-10-01",
+                    "effEnd": "2018-10-01",
+                    "name": "Structure 1",
+                    "description": "This is a structure",
+                    "isPrimary": true
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getAll",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 17751\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Tue, 03 Oct 2017 08:23:08 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "93",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"id\":1,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"name\":\"Structure 1\",\"description\":\"This is a structure\",\"isPrimary\":true},{\"id\":5,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"name\":\"Structure 1\",\"description\":\"This is a structure\",\"isPrimary\":true}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getAll",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "id": 5,
+                  "effBegin": "2017-10-01",
+                  "effEnd": "2018-10-01",
+                  "name": "Structure 1",
+                  "description": "This is a structure",
+                  "isPrimary": true,
+                  "hierarchy": [
+                    {
+                      "positionCode": "DR1",
+                      "positionId": 1,
+                      "children": [
+                        {
+                          "positionCode": "MNGR1",
+                          "positionId": 2,
+                          "children": [
+                            {
+                              "positionCode": "MNGR1",
+                              "positionId": 4,
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "positionCode": "MNGR1",
+                          "positionId": 3,
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 17751,\n\t\"id\": 5\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Tue, 03 Oct 2017 08:24:26 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "84",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"id\":5,\"effBegin\":\"2017-10-01\",\"effEnd\":\"2018-10-01\",\"name\":\"Structure 1\",\"description\":\"This is a structure\",\"isPrimary\":true,\"hierarchy\":[{\"positionCode\":\"DR1\",\"positionId\":1,\"children\":[{\"positionCode\":\"MNGR1\",\"positionId\":2,\"children\":[{\"positionCode\":\"MNGR1\",\"positionId\":4,\"children\":[]}]},{\"positionCode\":\"MNGR1\",\"positionId\":3,\"children\":[]}]}]}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": ""
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/save",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"companyId\": 17751,\n\t\"effBegin\": \"2017-10-1\",\n\t\"effEnd\": \"2018-10-1\",\n\t\"name\": \"Structure 1\",\n\t\"description\": \"This is a structure\",\n\t\"isPrimary\": true,\n\t\"posStructureHierarchy\": [\n\t\t{\n\t\t\t\"parentId\": 0,\n\t\t\t\"positionId\": 1\n\t\t},\n\t\t{\n\t\t\t\"parentId\": 1,\n\t\t\t\"positionId\": 2\n\t\t},\n\t\t{\n\t\t\t\"parentId\": 1,\n\t\t\t\"positionId\": 3\n\t\t},\n\t\t{\n\t\t\t\"parentId\": 2,\n\t\t\t\"positionId\": 4\n\t\t}\n\t]\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "NONE",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {}
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "save",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "companyId": 17751
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "example": {
+        "status": 200,
+        "message": "All data retrieved",
+        "data": [
+          {
+            "id": 1,
+            "effBegin": "2017-10-01",
+            "effEnd": "2018-10-01",
+            "name": "Structure 1",
+            "description": "This is a structure",
+            "isPrimary": true
+          },
+          {
+            "id": 5,
+            "effBegin": "2017-10-01",
+            "effEnd": "2018-10-01",
+            "name": "Structure 1",
+            "description": "This is a structure",
+            "isPrimary": true
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Datum": {
+      "title": "Datum",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "isPrimary": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "name",
+        "description",
+        "isPrimary"
+      ]
+    },
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 5
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "id"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "id": 5,
+          "effBegin": "2017-10-01",
+          "effEnd": "2018-10-01",
+          "name": "Structure 1",
+          "description": "This is a structure",
+          "isPrimary": true,
+          "hierarchy": [
+            {
+              "positionCode": "DR1",
+              "positionId": 1,
+              "children": [
+                {
+                  "positionCode": "MNGR1",
+                  "positionId": 2,
+                  "children": [
+                    {
+                      "positionCode": "MNGR1",
+                      "positionId": 4,
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "positionCode": "MNGR1",
+                  "positionId": 3,
+                  "children": []
+                }
+              ]
+            }
+          ]
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "isPrimary": {
+          "description": "",
+          "type": "boolean"
+        },
+        "hierarchy": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Hierarchy"
+          }
+        }
+      },
+      "required": [
+        "id",
+        "effBegin",
+        "effEnd",
+        "name",
+        "description",
+        "isPrimary",
+        "hierarchy"
+      ]
+    },
+    "Hierarchy": {
+      "title": "Hierarchy",
+      "type": "object",
+      "properties": {
+        "positionCode": {
+          "description": "",
+          "type": "string"
+        },
+        "positionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "children": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Child"
+          }
+        }
+      },
+      "required": [
+        "positionCode",
+        "positionId",
+        "children"
+      ]
+    },
+    "Child": {
+      "title": "Child",
+      "type": "object",
+      "properties": {
+        "positionCode": {
+          "description": "",
+          "type": "string"
+        },
+        "positionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "children": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Child8"
+          }
+        }
+      },
+      "required": [
+        "positionCode",
+        "positionId",
+        "children"
+      ]
+    },
+    "Child8": {
+      "title": "Child8",
+      "type": "object",
+      "properties": {
+        "positionCode": {
+          "description": "",
+          "type": "string"
+        },
+        "positionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "children": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      },
+      "required": [
+        "positionCode",
+        "positionId",
+        "children"
+      ]
+    },
+    "SaveRequest": {
+      "title": "saveRequest",
+      "example": {
+        "companyId": 17751,
+        "effBegin": "2017-10-1",
+        "effEnd": "2018-10-1",
+        "name": "Structure 1",
+        "description": "This is a structure",
+        "isPrimary": true,
+        "posStructureHierarchy": [
+          {
+            "parentId": 0,
+            "positionId": 1
+          },
+          {
+            "parentId": 1,
+            "positionId": 2
+          },
+          {
+            "parentId": 1,
+            "positionId": 3
+          },
+          {
+            "parentId": 2,
+            "positionId": 4
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "isPrimary": {
+          "description": "",
+          "type": "boolean"
+        },
+        "posStructureHierarchy": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PosStructureHierarchy"
+          }
+        }
+      },
+      "required": [
+        "companyId",
+        "effBegin",
+        "effEnd",
+        "name",
+        "description",
+        "isPrimary",
+        "posStructureHierarchy"
+      ]
+    },
+    "PosStructureHierarchy": {
+      "title": "PosStructureHierarchy",
+      "type": "object",
+      "properties": {
+        "parentId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "positionId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "parentId",
+        "positionId"
+      ]
+    },
+    "UpdateRequest": {
+      "title": "updateRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 5,
+        "effBegin": "2017-10-1",
+        "effEnd": "2018-10-1",
+        "name": "Structure 2",
+        "description": "This is NOT a structure",
+        "isPrimary": true,
+        "posStructureHierarchy": [
+          {
+            "parentId": 0,
+            "positionId": 1
+          },
+          {
+            "parentId": 1,
+            "positionId": 3
+          },
+          {
+            "parentId": 1,
+            "positionId": 4
+          },
+          {
+            "parentId": 4,
+            "positionId": 2
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "effBegin": {
+          "description": "",
+          "type": "string"
+        },
+        "effEnd": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "description": {
+          "description": "",
+          "type": "string"
+        },
+        "isPrimary": {
+          "description": "",
+          "type": "boolean"
+        },
+        "posStructureHierarchy": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/PosStructureHierarchy"
+          }
+        }
+      },
+      "required": [
+        "companyId",
+        "id",
+        "effBegin",
+        "effEnd",
+        "name",
+        "description",
+        "isPrimary",
+        "posStructureHierarchy"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "companyId": 17751,
+        "id": 1
+      },
+      "type": "object",
+      "properties": {
+        "companyId": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "id": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        }
+      },
+      "required": [
+        "companyId",
+        "id"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    }
+  }
+}

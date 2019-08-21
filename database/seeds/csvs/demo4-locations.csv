@@ -1,0 +1,2 @@
+tenant_id,company_id,id,eff_begin,eff_end,name,description,tax_office_code,calendar_id,city_code,address,postal_code,phone,fax,created_by,created_at,updated_by,updated_at,code,latitude,longitude
+1000000001,1000000001,89,2019-06-10,9999-12-31,Head Office,Head Office,,,ID-JKP,,,,,0,2019-06-11,,,HO,,

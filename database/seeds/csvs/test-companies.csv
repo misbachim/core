@@ -1,0 +1,3 @@
+"tenant_id","id","eff_begin","eff_end","name","description","company_tax_number","is_deleted","created_by","created_at","updated_by","updated_at","file_logo","location_code","tax_withholder_number","tax_withholder_name"
+1000000000,1700000000,"2008-01-02","2099-12-31","LAWENCON","VISI MISI LAWENCON ADALAH BLABLABLA","12.123.232.3-243.243",False,1,"2017-09-27 05:18:07.019564+00",1,"2018-07-27 07:34:12+00",,"HOF","11.111.111.1-111.222","Lawencon"
+1000000000,1900000000,"2000-01-31","2099-12-31","MAJU BERSAMA","Mari maju bersama kami","62.021.292.4-915.000",False,0,"2017-09-27 05:18:07.019564+00",1,"2018-05-17 03:42:21+00",,"JAG","11.111.111.1-111.111","Maju Bersama"

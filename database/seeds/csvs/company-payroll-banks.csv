@@ -1,0 +1,12 @@
+tenant_id,company_id,code,swift_code,name,description,created_by,created_at,updated_by,updated_at
+,,008,BMRIIDJA,Bank Mandiri,,0,,,
+,,451,BSMDIDJA,Bank Syariah Mandiri,,0,,,
+,,014,CENAIDJA,Bank Bca,,0,,,
+,,536,CENAIDJA,Bank Bca Syariah,,0,,,
+,,009,BNINIDJA,Bank Bni,,0,,,
+,,427,SYNIIDJA,Bank Bni Syariah,,0,,,
+,,002,BRINIDJA,Bank Bri,,0,,,
+,,422,BRISIDJA,Bank Bri Syariah,,0,,,
+,,022,BNIAIDJA,Bank Cimb Niaga,,0,,,
+,,041,NISPIDJA,Bank Ocbc Nisp,,0,,,
+,,031,BBBAIDJA,Bank Permata,,0,,,

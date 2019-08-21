@@ -1,0 +1,2 @@
+tenant_id,id,eff_begin,eff_end,name,description,company_tax_number,is_deleted,created_by,created_at,updated_by,updated_at,file_logo,location_code,tax_withholder_number,tax_withholder_name
+1000000001,1000000001,2019-06-10,9999-12-31,Demo,Demo,0,f,0,2019-06-11,,,,HO,Lydia Hutabarat,

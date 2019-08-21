@@ -1,0 +1,41 @@
+{
+    "post": {
+        "tags": ["location"],
+        "summary": "Save location information",
+        "description": "Save information on a location that the user has access to.",
+        "operationId": "saveLocation",
+        "parameters": [
+            {
+                "name": "Location Full Information",
+                "description": "Target location's full information (exclude: id, $$ref)",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "schemas/location.json"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "location information saved",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "id": {
+                            "type": "integer"
+                        }
+                    },
+                    "example": {
+                        "id": 1
+                    }
+                }
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

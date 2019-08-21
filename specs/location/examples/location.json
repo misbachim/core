@@ -1,0 +1,34 @@
+{
+    "0": {
+        "id": 1,
+        "companyId": 17751,
+        "effBegin": "2017-01-01",
+        "effEnd": "2099-12-31",
+        "name": "Kantor Pusat",
+        "description": "Kantor Pusat Jakarta",
+        "taxOfficeCode": "TAX",
+        "calendarId": 1,
+        "cityId": 2,
+        "districtId": 2,
+        "address": "ini alamatnya",
+        "postalCode": "12312321",
+        "phone": "31234 314123124 213",
+        "fax": "1234 4567 8907"
+    },
+    "1": {
+        "id": 2,
+        "companyId": 17751,
+        "effBegin": "2017-01-01",
+        "effEnd": "2099-12-31",
+        "name": "Kantor Pusat",
+        "description": "Kantor Pusat Jakarta",
+        "taxOfficeCode": "TAX",
+        "calendarId": 1,
+        "cityId": 2,
+        "districtId": 2,
+        "address": "ini alamatnya",
+        "postalCode": "12312321",
+        "phone": "31234 314123124 213",
+        "fax": "1234 4567 8907"
+    }
+}

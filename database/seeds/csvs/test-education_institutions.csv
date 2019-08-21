@@ -1,0 +1,5 @@
+tenant_id,company_id,id,name,address,country_code,lov_acreditation,eff_begin,eff_end,created_at,created_by,updated_at,updated_by,link_website
+1000000000,1700000000,5,Universitas Indonesia,"Jl. Margonda Raya, Pondok Cina, Beji, Kota Depok, Jawa Barat 16424",IN,A,2018-09-12,2018-09-12,2018-09-12 10:46:21+00,1,,,
+1000000000,1700000000,4,Universitas Indonesia,"Jl. Margonda Raya, Pondok Cina, Beji, Kota Depok, Jawa Barat 16424",IN,A,2018-09-12,2018-09-13,2018-09-12 04:19:42+00,1,2018-09-13 02:27:30+00,1,
+1000000000,1700000000,6,Universitas Indonesia,"Jl. Margonda Raya, Pondok Cina, Beji, Kota Depok, Jawa Barat 16424",IN,A,2018-09-13,2018-09-30,2018-09-13 02:27:30+00,1,,,
+1000000000,1700000000,7,Binus University,Kemanggisan Jakarta Barat,IN,A,2018-09-13,9999-12-31,2018-09-13 04:48:57+00,1,,,https://binus.ac.id

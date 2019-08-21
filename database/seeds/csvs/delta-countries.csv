@@ -1,0 +1,4 @@
+tenant_id,company_id,id,code,name,dial_code,nationality,created_by,created_at,updated_by,updated_at
+12345,12345,7,ID,Indonesia,62,Indonesian,0,2018-01-01,,
+1113223891,1113223891,8,ID,Indonesia,62,Indonesian,0,2018-01-01,,
+1113223891,1000000000,9,ID,Indonesia,62,Indonesian,0,2018-01-01,,

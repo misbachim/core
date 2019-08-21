@@ -1,0 +1,14 @@
+tenant_id,company_id,setting_type_code,setting_lov_key_data,created_by,created_at,updated_by,updated_at,fix_value
+,,DATE,YYYYMMDD,0,,,,
+,,LANG,EN,0,,,,
+,,NSEP,.,0,,,,
+,,ADAL,D,0,,,,
+,,VALD,I,0,,,,
+,,WFES,AA-1,0,,,,
+,,AMA1,-,0,,,,200000
+,,AMI1,-,0,,,,0
+,,AMA2,-,0,,,,200000
+,,AMI2,-,0,,,,0
+,,PROJ,MPRO,0,,,,
+,,MAPR,OPT,0,,,,
+,,MAAC,OPT,0,,,,

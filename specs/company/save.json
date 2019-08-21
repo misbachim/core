@@ -1,0 +1,41 @@
+{
+    "post": {
+        "tags": ["company"],
+        "summary": "Save company information",
+        "description": "Save information on a company that the user has access to.",
+        "operationId": "saveCompany",
+        "parameters": [
+            {
+                "name": "Company Full Information",
+                "description": "Target company's full information (exclude: companyId, $$ref)",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "$ref": "schemas/company.json"
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "company information saved",
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "companyId": {
+                            "type": "integer"
+                        }
+                    },
+                    "example": {
+                        "companyId": 12345
+                    }
+                }
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

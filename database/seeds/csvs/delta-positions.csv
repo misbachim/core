@@ -1,0 +1,32 @@
+tenant_id,company_id,eff_begin,eff_end,id,code,description,is_head,created_by,created_at,updated_by,updated_at,unit_code,job_code,name
+12345,12345,2016-08-01,9999-12-31,1,PD,President Director,TRUE,0,2018-01-01,,,DIVBOD,CEO,President Director
+12345,12345,2016-08-01,9999-12-31,2,VPD,Vice President Director,TRUE,0,2018-01-01,,,DIVBOD2,DCEO,Vice President Director
+12345,12345,2016-08-01,9999-12-31,3,CHRO,Chief Human Resources Officer,TRUE,0,2018-01-01,,,DIVHRGA,DIR,Chief Human Resources Officer
+12345,12345,2016-08-01,9999-12-31,4,HRGM,Human Resources General Manager,TRUE,0,2018-01-01,,,DIVHRGA1,GM,Human Resources General Manager
+12345,12345,2016-08-01,9999-12-31,5,HRGAM,Human Resources Operations and General Affairs Manager,TRUE,0,2018-01-01,,,DEPTHRGA1,MGR,Human Resources Operations and GA Manager
+12345,12345,2016-08-01,9999-12-31,6,HRGAS,Human Resources & General Affairs Staff,FALSE,0,2018-01-01,,,DEPTHRGA1,STAFF,Human Resources & General Affairs Staff
+12345,12345,2016-08-01,9999-12-31,7,GAHD,General Affairs Help Desk Staff,FALSE,0,2018-01-01,,,DEPTHRGA1,STAFF,General Affairs Help Desk Staff
+12345,12345,2016-08-01,9999-12-31,8,RCPT,Reception Staff,FALSE,0,2018-01-01,,,DEPTHRGA1,STAFF,Reception Staff
+12345,12345,2018-01-03,9999-12-31,9,HROS,HR Operation Staff,FALSE,0,2018-01-01,,,DEPTHRGA1,STAFF,HR Operation Staff
+12345,12345,2016-08-01,9999-12-31,10,HRSM,Human Resources Services Manager,TRUE,0,2018-01-01,,,DEPTHRGA2,MGR,Human Resources Services Manager
+12345,12345,2016-08-01,9999-12-31,11,HRBP,HR Business Partner,FALSE,0,2018-01-01,,,DEPTHRGA2,SPV,HR Business Partner
+12345,12345,2016-08-01,9999-12-31,12,PHS,Payroll & HRIS Senior Supervisor,FALSE,0,2018-01-01,,,DEPTHRGA2,SPV,Payroll & HRIS Senior Supervisor
+12345,12345,2017-01-01,9999-12-31,13,HRBPS,Human Resources Business Partner Supervisor,FALSE,0,2018-01-01,,,DEPTHRGA2,SPV,Human Resources Business Partner Supervisor
+12345,12345,2016-08-01,9999-12-31,14,CIO,Chief Information Officer,TRUE,0,2018-01-01,,,DIVIT,CTO,Chief Information Officer
+12345,12345,2016-08-01,9999-12-31,15,UI/UX,Sub Division It UI/UX General Manager,TRUE,0,2018-01-01,,,UI/UX,GM,Sub Division It UI/UX General Manager
+12345,12345,2016-08-01,9999-12-31,16,IT UI/X CREATIVE,It UI/UX Creative Manager,FALSE,0,2018-01-01,,,IT UI/X CREATIVE,MGR,It UI/UX Creative Manager
+12345,12345,2018-01-01,9999-12-31,17,CRS,Creative Staff,FALSE,0,2018-01-01,,,IT UI/X CREATIVE,STAFF,Creative Staff
+12345,12345,2018-01-01,9999-12-31,18,MCMANAGER,Management Creative Manager,TRUE,0,2018-01-01,,,IT UI/X CREATIVE,MGR,Management Creative Manager
+12345,12345,2016-08-01,9999-12-31,19,IT UI/X BA,It UI/X Business Analyst Manager,FALSE,0,2018-01-01,,,IT UI/X BA,MGR,It UI/X Business Analyst Manager
+12345,12345,2018-01-01,9999-12-31,20,MSBAMGR,Management Service BA Manager,TRUE,0,2018-01-01,,,IT UI/X BA,MGR,Management Service BA Manager
+12345,12345,2018-01-01,9999-12-31,21,SBASTAFF,Service Business Analyst Staff,FALSE,0,2018-01-01,,,IT UI/X BA,STAFF,Service Business Analyst Staff
+12345,12345,2018-01-01,9999-12-31,22,ITDEVGENERALMANAGER,IT Development General Manager,TRUE,0,2018-01-01,,,ITDEVDIV,GM,IT Development General Manager
+12345,12345,1970-01-01,9999-12-31,23,ITSDS,IT Service Development Staff,FALSE,0,2018-01-01,,,ITSERVICE,STAFF,IT Service Development Staff
+12345,12345,2018-01-01,9999-12-31,24,ITSDSPV,IT Service Development Spv,FALSE,0,2018-01-01,,,ITSERVICE,SPV,IT Service Development Spv
+12345,12345,2018-01-01,9999-12-31,25,HOCITSERVICE,Head of Service Development,TRUE,0,2018-01-01,,,ITSERVICE,MGR,Head of Service Development
+12345,12345,2016-08-01,9999-12-31,26,DSGM,IT Platform General Manager,FALSE,0,2018-01-01,,,ITPLATFORM,GM,IT Platform General Manager
+12345,12345,2018-01-01,9999-12-31,27,ITPDS,IT Platform Development Staff,FALSE,0,2018-01-01,,,ITPLATFORM,STAFF,IT Platform Development Staff
+12345,12345,2018-01-01,9999-12-31,28,IPDSPV,IT Platform Development Spv,FALSE,0,2018-01-01,,,ITPLATFORM,SPV,IT Platform Development Spv
+12345,12345,2018-01-01,9999-12-31,29,ITPM,IT Platform Manager,TRUE,0,2018-01-01,,,ITPLATFORM,MGR,IT Platform Manager
+12345,12345,2018-01-01,9999-12-31,30,MPBAMANAGER,Management Platform BA Manager,TRUE,0,2018-01-01,,,UIXPLATFORM,MGR,Management Platform BA Manager
+12345,12345,2018-01-01,9999-12-31,31,PBASTAFF,Platform Business Analyst Staff,FALSE,0,2018-01-01,,,UIXPLATFORM,STAFF,Platform Business Analyst Staff

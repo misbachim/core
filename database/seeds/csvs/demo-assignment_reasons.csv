@@ -1,0 +1,5 @@
+tenant_id,company_id,id,eff_begin,eff_end,lov_acty,code,description,created_by,created_at,updated_by,updated_at
+1234567890,1234567890,1,1970-01-01,9999-12-31,HIRE,ADD,Addition,0,2018-01-01,,
+1234567890,1234567890,2,1970-01-01,9999-12-31,HIRE,REP,Replacement,0,2018-01-01,,
+1234567890,1234567890,3,1970-01-01,9999-12-31,TERM,RES,Resign,0,2018-01-01,,
+1234567890,1234567890,4,1970-01-01,9999-12-31,TERM,CUT,Cut,0,2018-01-01,,

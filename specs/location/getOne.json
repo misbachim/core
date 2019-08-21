@@ -1,0 +1,41 @@
+{
+    "post": {
+        "tags": ["location"],
+        "summary": "Get information on a location",
+        "description": "Return information on one location that the user has access to.",
+        "operationId": "getOneLocation",
+        "parameters": [
+            {
+                "name": "Location Basic Information",
+                "description": "Target location's basic information",
+                "in": "body",
+                "required": true,
+                "schema": {
+                    "type": "object",
+                    "properties": {
+                        "companyId": {
+                            "type": "integer"
+                        },
+                        "id": {
+                            "type": "integer"
+                        }
+                    }
+                }
+            }
+        ],
+        "responses": {
+            "200": {
+                "description": "location information retrieved (exclude: id, companyId, $$ref)",
+                "schema": {
+                    "$ref": "schemas/location.json"
+                }
+            },
+            "422": {
+                "description": "validation error"
+            },
+            "500": {
+                "description": "internal server error"
+            }
+        }
+    }
+}

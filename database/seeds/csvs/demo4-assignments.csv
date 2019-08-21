@@ -1,0 +1,2 @@
+tenant_id,company_id,id,person_id,eff_begin,eff_end,is_primary,employee_id,employee_status_code,cost_center_code,grade_code,lov_asta,supervisor_id,created_by,created_at,updated_by,updated_at,file_assignment_doc,note,final_process_date,assignment_doc_number,location_code,position_code,job_code,unit_code,assignment_reason_code,lov_acty,position_slot_code
+1000000001,1000000001,2002,666,2019-06-10,9999-12-31,t,10000001,CONT,,16,ACT,,0,2019-06-11,,,,,,,HO,PD,CEO,DIVBOD,ADD,HIRE,PD_1

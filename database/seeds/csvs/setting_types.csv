@@ -1,0 +1,16 @@
+code,name,type,created_by,created_at,updated_by,updated_at,vtype
+DATE,Date Format,A,0,2017-10-02 01:57:46+00,,,L
+LANG,Language,A,0,2017-10-02 01:57:46+00,,,L
+NSEP,Number Separator,A,0,2017-10-02 01:57:46+00,,,L
+ADAL,Advanced Annual Leave,C,0,2017-10-02 01:57:46+00,,,L
+VALD,Validation,C,0,2017-10-02 01:57:46+00,,,L
+WFES,Workflow Escalation,C,0,2017-10-02 01:57:46+00,,,L
+AMA1,Allowance 1 Max Value,C,0,2017-10-02 01:57:46+00,,,F
+AMI1,Allowance 1 Min Value,C,0,2017-10-02 01:57:46+00,,,F
+AMA2,Allowance 2 Max Value,C,0,2017-10-02 01:57:46+00,,,F
+AMI2,Allowance 2 Min Value,C,0,2017-10-02 01:57:46+00,,,F
+PROJ,Project,C,0,2017-10-02 01:57:46+00,,,L
+MAL,Max Advanced Leave,C,0,2017-10-02 01:57:46+00,,,F
+CURR,Currency,C,0,2017-10-02 01:57:46+00,,,L
+MAPR,Mobile Attendance Project,C,0,2017-10-02 01:57:46+00,,,L
+MAAC,Mobile Attendance Activity Code,C,0,2017-10-02 01:57:46+00,,,L

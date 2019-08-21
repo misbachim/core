@@ -1,0 +1,2 @@
+tenant_id,id,eff_begin,eff_end,name,description,company_tax_number,is_deleted,created_by,created_at,updated_by,updated_at,file_logo,location_code,tax_withholder_number,tax_withholder_name
+1234567890,1234567890,1970-01-01,9999-12-31,PT. Maju Terus 123,PT. Maju Terus 123 adalah sebuah perusahaan startup yang bergerak di bidang teknologi informasi.,123000000123,FALSE,0,2018-01-01,,,,HO,123123123,Alex Wallace

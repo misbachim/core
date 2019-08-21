@@ -1,0 +1,963 @@
+{
+  "swagger": "2.0",
+  "info": {
+    "version": "1.0",
+    "title": "Lov Type",
+    "description": "Enable user to perform CRUD operations on lov type.",
+    "license": {
+      "name": "MIT",
+      "url": "http://github.com/gruntjs/grunt/blob/master/LICENSE-MIT"
+    }
+  },
+  "host": "localhost:8000",
+  "basePath": "/core/lovtype",
+  "schemes": [
+    "http"
+  ],
+  "consumes": [
+    "application/json"
+  ],
+  "produces": [
+    "application/json"
+  ],
+  "paths": {
+    "/getAll": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getAll",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getAll",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetAllResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "All data retrieved",
+                "data": [
+                  {
+                    "code": "DATE",
+                    "name": "DATE FORMAT",
+                    "isSetting": true
+                  },
+                  {
+                    "code": "LANG",
+                    "name": "LANGUAGE",
+                    "isSetting": true
+                  },
+                  {
+                    "code": "NSEP",
+                    "name": "NUMBER SEPARATOR",
+                    "isSetting": true
+                  },
+                  {
+                    "code": "ASTA",
+                    "name": "ASSIGNMENT STATUS",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "BLOD",
+                    "name": "BLOOD TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "CURR",
+                    "name": "CURRENCY",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "DCTY",
+                    "name": "DOCUMENT TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "EDUL",
+                    "name": "EDUCATION LEVEL",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "FLTY",
+                    "name": "FILE TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "FMRL",
+                    "name": "FAMILY RELATION",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "GNDR",
+                    "name": "GENDER",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "MARS",
+                    "name": "MARITAL STATUS",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "MBTY",
+                    "name": "MEMBERSHIP TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "NBFT",
+                    "name": "NUMBERING FORMAT TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "PTYP",
+                    "name": "PERSON TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "RLGN",
+                    "name": "RELIGION",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "RSOW",
+                    "name": "RESIDENCE OWNERSHIP",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "RSTY",
+                    "name": "RESIDENCE TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "RWTY",
+                    "name": "REWARD TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "STTY",
+                    "name": "STRUCTURE TYPE",
+                    "isSetting": false
+                  },
+                  {
+                    "code": "WFTY",
+                    "name": "WORKFLOW TYPE",
+                    "isSetting": false
+                  }
+                ]
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getAll",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"code\": \"RLGN\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 29 Sep 2017 09:01:53 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "103",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"All data retrieved\",\"data\":[{\"code\":\"DATE\",\"name\":\"DATE FORMAT\",\"isSetting\":true},{\"code\":\"LANG\",\"name\":\"LANGUAGE\",\"isSetting\":true},{\"code\":\"NSEP\",\"name\":\"NUMBER SEPARATOR\",\"isSetting\":true},{\"code\":\"ASTA\",\"name\":\"ASSIGNMENT STATUS\",\"isSetting\":false},{\"code\":\"BLOD\",\"name\":\"BLOOD TYPE\",\"isSetting\":false},{\"code\":\"CURR\",\"name\":\"CURRENCY\",\"isSetting\":false},{\"code\":\"DCTY\",\"name\":\"DOCUMENT TYPE\",\"isSetting\":false},{\"code\":\"EDUL\",\"name\":\"EDUCATION LEVEL\",\"isSetting\":false},{\"code\":\"FLTY\",\"name\":\"FILE TYPE\",\"isSetting\":false},{\"code\":\"FMRL\",\"name\":\"FAMILY RELATION\",\"isSetting\":false},{\"code\":\"GNDR\",\"name\":\"GENDER\",\"isSetting\":false},{\"code\":\"MARS\",\"name\":\"MARITAL STATUS\",\"isSetting\":false},{\"code\":\"MBTY\",\"name\":\"MEMBERSHIP TYPE\",\"isSetting\":false},{\"code\":\"NBFT\",\"name\":\"NUMBERING FORMAT TYPE\",\"isSetting\":false},{\"code\":\"PTYP\",\"name\":\"PERSON TYPE\",\"isSetting\":false},{\"code\":\"RLGN\",\"name\":\"RELIGION\",\"isSetting\":false},{\"code\":\"RSOW\",\"name\":\"RESIDENCE OWNERSHIP\",\"isSetting\":false},{\"code\":\"RSTY\",\"name\":\"RESIDENCE TYPE\",\"isSetting\":false},{\"code\":\"RWTY\",\"name\":\"REWARD TYPE\",\"isSetting\":false},{\"code\":\"STTY\",\"name\":\"STRUCTURE TYPE\",\"isSetting\":false},{\"code\":\"WFTY\",\"name\":\"WORKFLOW TYPE\",\"isSetting\":false}]}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getAll",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/getOne": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "getOne",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "getOne",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/GetOneResponse"
+            },
+            "examples": {
+              "application/json": {
+                "status": 200,
+                "message": "Data retrieved",
+                "data": {
+                  "name": "LANGUAGE",
+                  "isSetting": true
+                }
+              }
+            }
+          }
+        },
+        "security": [],
+        "x-unitTests": [
+          {
+            "request": {
+              "method": "POST",
+              "uri": "/getOne",
+              "headers": {
+                "Content-Type": "application/json",
+                "tenantId": "1000000000",
+                "userId": "1",
+                "email": "user1@mail.com"
+              },
+              "body": "{\n\t\"code\": \"LANG\"\n}"
+            },
+            "expectedResponse": {
+              "x-allowExtraHeaders": true,
+              "x-bodyMatchMode": "RAW",
+              "x-arrayOrderedMatching": false,
+              "x-arrayCheckCount": false,
+              "x-matchResponseSchema": true,
+              "headers": {
+                "Cache-Control": "no-cache, private",
+                "Connection": "keep-alive",
+                "Content-Language": "en",
+                "Content-Type": "application/json",
+                "Date": "Fri, 29 Sep 2017 09:02:10 GMT",
+                "Server": "nginx",
+                "Transfer-Encoding": "chunked",
+                "Via": "kong/0.11.0",
+                "X-Kong-Proxy-Latency": "0",
+                "X-Kong-Upstream-Latency": "65",
+                "X-Powered-By": "PHP/7.1.9"
+              },
+              "body": "{\"status\":200,\"message\":\"Data retrieved\",\"data\":{\"name\":\"LANGUAGE\",\"isSetting\":true}}"
+            },
+            "x-testShouldPass": true,
+            "x-testEnabled": true,
+            "x-testName": "getOne",
+            "x-testDescription": "TODO: Add Description"
+          }
+        ],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/save": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "save",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "save",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/SaveResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/update": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "update",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "update",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/UpdateResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    },
+    "/delete": {
+      "post": {
+        "description": "TODO: Add Description",
+        "summary": "delete",
+        "tags": [
+          "Misc"
+        ],
+        "operationId": "delete",
+        "produces": [
+          "application/json"
+        ],
+        "parameters": [
+          {
+            "name": "Body",
+            "in": "body",
+            "required": true,
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteRequest"
+            }
+          },
+          {
+            "name": "tenantId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "userId",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "email",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          },
+          {
+            "name": "Content-Type",
+            "in": "header",
+            "required": true,
+            "type": "string",
+            "description": ""
+          }
+        ],
+        "responses": {
+          "200": {
+            "description": "",
+            "schema": {
+              "$ref": "#/definitions/DeleteResponse"
+            },
+            "examples": {}
+          }
+        },
+        "security": [],
+        "x-unitTests": [],
+        "x-operation-settings": {
+          "CollectParameters": false,
+          "AllowDynamicQueryParameters": false,
+          "AllowDynamicFormParameters": false,
+          "IsMultiContentStreaming": false
+        }
+      }
+    }
+  },
+  "definitions": {
+    "GetAllRequest": {
+      "title": "getAllRequest",
+      "example": {
+        "code": "RLGN"
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "GetAllResponse": {
+      "title": "getAllResponse",
+      "example": {
+        "status": 200,
+        "message": "All data retrieved",
+        "data": [
+          {
+            "code": "DATE",
+            "name": "DATE FORMAT",
+            "isSetting": true
+          },
+          {
+            "code": "LANG",
+            "name": "LANGUAGE",
+            "isSetting": true
+          },
+          {
+            "code": "NSEP",
+            "name": "NUMBER SEPARATOR",
+            "isSetting": true
+          },
+          {
+            "code": "ASTA",
+            "name": "ASSIGNMENT STATUS",
+            "isSetting": false
+          },
+          {
+            "code": "BLOD",
+            "name": "BLOOD TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "CURR",
+            "name": "CURRENCY",
+            "isSetting": false
+          },
+          {
+            "code": "DCTY",
+            "name": "DOCUMENT TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "EDUL",
+            "name": "EDUCATION LEVEL",
+            "isSetting": false
+          },
+          {
+            "code": "FLTY",
+            "name": "FILE TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "FMRL",
+            "name": "FAMILY RELATION",
+            "isSetting": false
+          },
+          {
+            "code": "GNDR",
+            "name": "GENDER",
+            "isSetting": false
+          },
+          {
+            "code": "MARS",
+            "name": "MARITAL STATUS",
+            "isSetting": false
+          },
+          {
+            "code": "MBTY",
+            "name": "MEMBERSHIP TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "NBFT",
+            "name": "NUMBERING FORMAT TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "PTYP",
+            "name": "PERSON TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "RLGN",
+            "name": "RELIGION",
+            "isSetting": false
+          },
+          {
+            "code": "RSOW",
+            "name": "RESIDENCE OWNERSHIP",
+            "isSetting": false
+          },
+          {
+            "code": "RSTY",
+            "name": "RESIDENCE TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "RWTY",
+            "name": "REWARD TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "STTY",
+            "name": "STRUCTURE TYPE",
+            "isSetting": false
+          },
+          {
+            "code": "WFTY",
+            "name": "WORKFLOW TYPE",
+            "isSetting": false
+          }
+        ]
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "array",
+          "items": {
+            "$ref": "#/definitions/Datum"
+          }
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Datum": {
+      "title": "Datum",
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "isSetting": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "isSetting"
+      ]
+    },
+    "GetOneRequest": {
+      "title": "getOneRequest",
+      "example": {
+        "code": "LANG"
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "GetOneResponse": {
+      "title": "getOneResponse",
+      "example": {
+        "status": 200,
+        "message": "Data retrieved",
+        "data": {
+          "name": "LANGUAGE",
+          "isSetting": true
+        }
+      },
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "$ref": "#/definitions/Data"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "Data": {
+      "title": "Data",
+      "type": "object",
+      "properties": {
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "isSetting": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "name",
+        "isSetting"
+      ]
+    },
+    "SaveRequest": {
+      "title": "saveRequest",
+      "example": {
+        "code": "FLUF",
+        "name": "KLINGON",
+        "isSetting": true
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "isSetting": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "code",
+        "name",
+        "isSetting"
+      ]
+    },
+    "SaveResponse": {
+      "title": "saveResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "UpdateRequest": {
+      "title": "updateRequest",
+      "example": {
+        "curCode": "FLUF",
+        "code": "MEGA",
+        "name": "KLINGON",
+        "isSetting": false
+      },
+      "type": "object",
+      "properties": {
+        "curCode": {
+          "description": "",
+          "type": "string"
+        },
+        "code": {
+          "description": "",
+          "type": "string"
+        },
+        "name": {
+          "description": "",
+          "type": "string"
+        },
+        "isSetting": {
+          "description": "",
+          "type": "boolean"
+        }
+      },
+      "required": [
+        "curCode",
+        "code",
+        "name",
+        "isSetting"
+      ]
+    },
+    "UpdateResponse": {
+      "title": "updateResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    },
+    "DeleteRequest": {
+      "title": "deleteRequest",
+      "example": {
+        "code": "MEGA"
+      },
+      "type": "object",
+      "properties": {
+        "code": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "code"
+      ]
+    },
+    "DeleteResponse": {
+      "title": "deleteResponse",
+      "type": "object",
+      "properties": {
+        "status": {
+          "description": "",
+          "type": "integer",
+          "format": "int32"
+        },
+        "message": {
+          "description": "",
+          "type": "string"
+        },
+        "data": {
+          "description": "",
+          "type": "string"
+        }
+      },
+      "required": [
+        "status",
+        "message",
+        "data"
+      ]
+    }
+  }
+}

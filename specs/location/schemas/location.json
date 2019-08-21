@@ -1,0 +1,22 @@
+{
+    "type": "object",
+    "properties": {
+        "id": { "type": "integer" },
+        "companyId": { "type": "integer" },
+        "effBegin": { "type": "date" },
+        "effEnd": { "type": "date" },
+        "name": { "type": "string" },
+        "description": { "type": "string" },
+        "taxOfficeCode": { "type": "string" },
+        "calendarId": { "type": "integer" },
+        "cityId": { "type": "integer" },
+        "districtId": { "type": "integer" },
+        "address": { "type": "string" },
+        "postalCode": { "type": "string"},
+        "phone": { "type": "string" },
+        "fax": { "type": "string" }
+    },
+    "example": {
+        "$ref": "../examples/location.json#/0"
+    }
+}

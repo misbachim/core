@@ -1,0 +1,66 @@
+stages:
+- name: Update & Test
+  steps:
+  - runScriptConfig:
+      image: reg-lawencon.trinix.id:30001/uat-base
+      shellScript: "# Install dependencies.\n#apt-get update && apt-get install -y
+        --no-install-recommends \\\n#curl git rsync libmemcached-dev libz-dev libpq-dev
+        \\\n#libjpeg-dev libpng-dev libfreetype6-dev \\\n#libssl-dev libmcrypt-dev
+        && \\\n\n# Install composer.\n#curl -sS https://getcomposer.org/installer
+        | php && \\\n#chmod +x composer.phar && mv composer.phar /usr/local/bin/composer
+        && \\\n\n# Install php extensions.\n#docker-php-ext-install mcrypt && \\\n#docker-php-ext-install
+        pdo_pgsql && \\\n#docker-php-ext-install pgsql && \\\n#docker-php-ext-install
+        bcmath && \\\n#docker-php-ext-install pcntl && \\\n\n\n# Clone linovhr3.\ngit
+        clone --single-branch -b new https://${GITHUB_USER}:${GITHUB_PASS}@github.com/linovsoftware/linovhr3.git\ncd
+        linovhr3/\n\n# Copy php.ini.\nmkdir -p /usr/local/etc/php/\ncp deployments/core/app-configs/php/php.ini
+        /usr/local/etc/php/\n\n# Init core submodule.\ngit config --file=.gitmodules
+        submodule.services/core.url https://${GITHUB_USER}:${GITHUB_PASS}@github.com/linovsoftware/core.git\ngit
+        submodule sync\ngit submodule update --init services/core\n\n# Set global
+        identity.\ngit config --global user.email \"pipeline-01@no-reply.com\"\ngit
+        config --global user.name \"Pipeline-01\"\n\n# Update ${CICD_GIT_BRANCH} branch
+        and checkout our commit ID.\ncd services/core/\ngit checkout -B ${CICD_GIT_BRANCH}\ngit
+        reset --hard ${CICD_GIT_COMMIT}\ngit pull origin ${CICD_GIT_BRANCH}\n\n# Run
+        component tests.\n#vendor/bin/phpunit -v && \\\n\nif [ ${CICD_GIT_BRANCH}
+        = \"master\" ] ; then \n    export ENV_TARGET='prod' \n    export ENV_RANCHER='prod'\nelif
+        [ ${CICD_GIT_BRANCH} = \"staging\" ] ; then \n    export ENV_TARGET=${CICD_GIT_BRANCH}\n
+        \   export ENV_RANCHER='rancher'\nelse\n    echo \"no env\"\nfi\n\n# Prepare
+        app for testing.\ncomposer install --no-plugins --no-scripts \ncp ../../deployments/core/envs/env.${ENV_RANCHER}
+        .env\n\n# Prepare build directory.\ncd ../../\nDEPLOY_ENV=${ENV_TARGET} ./run
+        prepare-build-dir core"
+    envFrom:
+    - sourceName: pipeline-secret
+      sourceKey: github-user
+      targetKey: GITHUB_USER
+    - sourceName: pipeline-secret
+      sourceKey: github-pass
+      targetKey: GITHUB_PASS
+- name: Versioned Build
+  steps:
+  - publishImageConfig:
+      dockerfilePath: ./linovhr3/.build-core/Dockerfile-php
+      buildContext: ./linovhr3/.build-core/
+      tag: core-api-php:${CICD_GIT_COMMIT}
+      pushRemote: true
+      registry: reg-lawencon.trinix.id:30001
+- name: Deploy
+  steps:
+  - runScriptConfig:
+      image: reg-lawencon.trinix.id:30001/gen-config:6
+      shellScript: "# generated yaml file\nbash /opt/gen-config.sh  master ${CICD_GIT_COMMIT}\n\n#
+        make directory for rancher-cli config\nmkdir -p /home/jenkins/.rancher/\n#
+        copy embedded config rancher\ncp /root/.rancher/cli2.json /home/jenkins/.rancher/\n#
+        rename /switch from dev to staging\nsed -i \"s/c-mq9dn:p-j2ntt/c-mq9dn:p-q8lt9/g\"
+        /home/jenkins/.rancher/cli2.json\n# deploy \nrancher kubectl create -f /opt/generated/core/core-api.yaml
+        --dry-run=true -o yaml | rancher kubectl apply -f -"
+timeout: 15
+branch:
+  exclude:
+  - dev
+  - master
+  - auth
+  - modul_announcement
+  - person_lovs
+  - staging
+  - tunning
+  - benefit-revis
+  - revis-workflow-setting

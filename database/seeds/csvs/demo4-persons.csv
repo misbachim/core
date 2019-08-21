@@ -1,0 +1,2 @@
+tenant_id,id,id_card,eff_begin,eff_end,first_name,last_name,birth_place,birth_date,email,phone,mobile,hobbies,strength,weakness,country_code,lov_ptyp,lov_blod,lov_gndr,lov_rlgn,lov_mars,created_by,created_at,updated_by,updated_at,file_photo
+1000000001,666,,2019-06-10,9999-12-31,Harry,Potter,"London, England",1980-07-31,harry.potter@yahoo.com,,,,,,ID,EMP,OO,M,CAT,M,0,2019-06-11,,,

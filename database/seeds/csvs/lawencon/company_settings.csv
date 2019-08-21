@@ -1,0 +1,3 @@
+tenant_id,company_id,setting_type_code,setting_lov_key_data,created_by,created_at
+1325836972,1325836972,DATE,YYYYMMDD,1,2018-11-09
+1325836972,1325836972,LANG,EN,1,2018-11-09
